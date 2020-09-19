@@ -1,0 +1,12 @@
+<div class="clearfix"></div>
+<div class="container_fullwidth">
+	<div class="container">
+		<div class="hot-products" style="background-color: #f0f0f0">
+			<h2><b><%= @article.title.upcase %></b></h2>
+			<h4><b><%= @article.description %></b></h4>
+			<p><%= image_tag @article.image_url(:large_thumb) if @article.image? %><%= @article.text.html_safe if !@article.text.nil? %></p>
+			<div class="clearfix"></div>
+		</div>
+		<i style="float: right"><%= link_to t("shared.back"), :back, class: "btn btn-warning" %></i>
+	</div>
+</div>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+	</head>
+	<body>
+		<h1>Chào <%= @user.name %></h1>
+		<h3>Một khách hàng với tên: <b><i style="font-size: 150%"><%= JSON.parse(@parameters)['name'] %></i></b>
+		đã đăng ký nhận tư vấn qua telesale bằng số điện thoại: <b><i style="font-size: 150%"><%= JSON.parse(@parameters)['phone'] %></i></b>.</h3>
+		<% if @params.present? %>
+		<ul><span style="font-size: 150%">Thông tin về xe của khách hàng <b><i><%= JSON.parse(@parameters)['name']%></i></b> như sau:</span>
+			<li>Xe thuộc hãng: <b><i><%= @params[4] %></i></b></li>
+			<li>Xe khách hàng là loại: <b><i><%= @params[3] %></i></b></li>
+			<li>Thuộc loại xe có trọng tải: <b><i><%= @params[0] %></i></b></li>
+			<li>Xe có tuổi đời: <b><i><%= @params[1] %></i></b></li>
+			<li>Khách hàng dự định tham gia bảo hiểm dưới hình thức: <b><i><%= @params[2] %></i></b></li>
+		</ul>
+		<h3>Xin liên hệ tư vấn cho khách hàng sớm nhất có thể.</h3>
+		<% else %>
+		<h3>Xin liên hệ tư vấn cho khách hàng sớm nhất có thể.</h3>
+		<% end%>
+	</body>
+</html>

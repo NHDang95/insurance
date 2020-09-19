@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Insurance D&H</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag "application", media: "all",
+    :"data-turbolinks-track" => "reload" %>
+    <%= javascript_include_tag "application",
+    :"data-turbolinks-track" => "reload" %>
+    <%= javascript_include_tag "bootstrap.min" %>
+    <% if content_for?(:head) %>
+    <%= yield(:head) %>
+    <% end %>
+  </head>
+  <body>
+    <%= render "layouts/header" %>
+    <div class="content" style="text-align: center;">
+      <% flash.each do |message_type, message| %>
+      <div class="alert alert-<%= message_type %> margin-header mess_color">
+        <%= message %>
+      </div>
+      <% end %>
+      <%= yield %>
+    </div>
+    <%= render "layouts/footer" %>
+  </body>
+</html>

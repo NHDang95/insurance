@@ -1,0 +1,36 @@
+<div id="page-wrapper">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-12">
+				<h2 class="page-header title"><%= t ".article_list" %></h2>
+			</div>
+		</div>
+		<table class="table table-bordered mt-5" >
+			<thead>
+				<tr class="bold">
+					<th><%= t "shared.article.title" %></th>
+					<th><%= t "shared.article.description" %></th>
+					<th><%= t "shared.article.date" %></th>
+					<th><%= t ".action" %></th>
+					<th><%= t ".action" %></th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @articles.each do |article| %>
+				<tr style="text-align: center;">
+					<td><%= article.title %></td>
+					<td><%= truncate(article.description, length: 100) %></td>					
+					<td><%= article.created_at.strftime("%d/%m/%Y") %></td>
+					<td><%= link_to t(".info"), admin_article_path(article), class: "btn btn-info" %></td>
+					<td class="text-center">
+						<%= link_to t(".delete"), admin_article_path(article),
+						method: :delete, data: {confirm: t("shared.message.you_sure")},
+						class: "btn btn-danger" %>
+					</td>
+				</tr>
+				<% end %>
+			</tbody>
+		</table>
+		<div><%= will_paginate @articles, :previous_label => t("shared.previous"), :next_label => t('shared.next') %></div>
+	</div>
+</div>

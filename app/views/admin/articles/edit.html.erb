@@ -1,0 +1,25 @@
+<div id="page-wrapper">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-12">
+				<h2 class="page-header title"><%= t ".edit_article" %></h2>
+			</div>
+		</div>
+		<%= form_for [:admin, @article], :html => {:multipart => true} do |f| %>
+		<%= render 'shared/error_messages',object: f.object %>
+		<div class="field text-center">
+			<%= f.text_area :title, placeholder: t(".title") %>
+		</div>
+		<div class="field">
+			<%= f.text_area :text, placeholder: t(".text"), class: "tinymce" %>
+			<%= tinymce %>
+		</div>
+		<div class="field">
+			<%= f.text_area :description, placeholder: t(".description") %>
+		</div>
+		<%= f.file_field :image %>
+		<%= f.submit t("shared.edit"), class: "btn btn-success" %>
+		<i style="float: right"><%= link_to t("shared.ack"), :back, class: "btn btn-warning" %></i>
+		<% end %>
+	</div>
+</div>

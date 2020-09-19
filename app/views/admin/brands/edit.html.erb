@@ -1,0 +1,23 @@
+<div id="page-wrapper">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-12">
+				<h2 class="page-header title"><%= t ".edit_brand" %></h2>
+			</div>
+		</div>
+		<%= form_for [:admin, @brand], :html => {:multipart => true} do |f| %>
+		<%= render 'shared/error_messages',object: f.object %>
+		<div class="row">
+			<div class="col-md-3">
+			</div>
+			<div class="col-md-6">
+				<%= f.text_area :name, placeholder: t(".name") %>
+			</div>
+		</div>
+		<div>
+			<%= f.submit t("shared.edit"), class: "btn btn-success" %>
+			<i style="float: right"><%= link_to t("shared.back"), :back, class: "btn btn-warning" %></i>		
+		</div>
+		<% end %>
+	</div>
+</div>

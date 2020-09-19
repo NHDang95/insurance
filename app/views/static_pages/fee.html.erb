@@ -1,0 +1,45 @@
+<div class="clearfix"></div>
+<div class="container_fullwidth">
+	<div class="container">
+		<div class="hot-products">
+			<h2 class="text-center"><b><%= t(".fee_title").upcase %></b></h2>
+			<ul style="display: inline;">
+				<li class="col-sm-4">
+					<a class="fa fa-bank fa-5x"></a>
+				</li>
+				<li class="col-sm-4">
+					<a class="fa fa-universal-access fa-5x"></a>
+				</li>
+				<li class="col-sm-4">
+					<a class="fa fa-handshake-o fa-5x"></a>
+				</li>
+				<ul>
+					<li class="col-sm-4">
+						<em><%= t".bank" %></em>
+					</li>
+					<li class="col-sm-4">
+						<em><%= t".service" %></em>
+					</li>
+					<li class="col-sm-4">
+						<em><%= t".consult" %></em>
+					</li>
+				</ul>
+			</ul>
+			<div class="clearfix"></div>
+			<section class="text-center" style="background-color: gold; color: white">
+				<h1><b><%= t".caution" %></b></h1>
+				<h4 style="background-color: transparent;"><%= t".description1" %></h4>
+				<h4 style="background-color: transparent;"><%= t".description2" %></h4>
+				<h4 style="background-color: transparent;"><%= t".description3" %></h4>
+			</section>
+			<div class="clearfix"></div>
+			<div class="text-center">
+				<h2><b><%= t".info" %></b></h2>
+				<i class="fa fa-mobile fa-5x"></i>
+				<h3>09 8601 9195</h3>
+			</div>
+		</div>
+		<i style="float: right"><%= link_to t("shared.back"), :back, class: "btn btn-warning" %></i>
+	</div>
+	<div class="clearfix"></div>
+</div>

@@ -1,0 +1,40 @@
+<div id="page-wrapper">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-12">
+				<h2 class="page-header title"><%= t ".brand_list" %></h2>
+			</div>
+		</div>
+		<table class="table table-bordered mt-5" >
+			<thead>
+				<tr class="bold">
+					<th><%= t ".name" %></th>
+					<th><%= t ".type" %></th>					
+					<th><%= t ".action" %></th>					
+					<th><%= t ".action" %></th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @brands.each do |brand| %>
+				<tr style="text-align: center;">
+					<td><%= brand.name.html_safe %></td>					
+					<td>
+						<% brand.types.each do |type| %>
+							<%= type.name %>   |
+						<% end %>
+					</td>										
+					<td class="text-center">
+						<%= link_to t("shared.edit"), edit_admin_brand_path(brand), class: "btn btn-success" %>
+					</td>
+					<td class="text-center">
+						<%= link_to t(".delete"), admin_brand_path(brand),
+						method: :delete, data: {confirm: t("shared.message.you_sure")},
+						class: "btn btn-danger" %>
+					</td>
+				</tr>
+				<% end %>
+			</tbody>
+		</table>
+		<div><%= will_paginate @brands, :previous_label => t("shared.previous"), :next_label => t('shared.next') %></div>
+	</div>
+</div>

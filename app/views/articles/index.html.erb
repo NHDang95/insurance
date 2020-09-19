@@ -1,0 +1,9 @@
+<div class="clearfix"></div>
+<div class="container_fullwidth">
+	<div class="container">
+		<div class="hot-products">
+			<%= render partial: "article" %>
+		</div>
+		<div><%= will_paginate @articles, :previous_label => t("shared.previous"), :next_label => t('shared.next') %></div>
+	</div>
+</div>
