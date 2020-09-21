@@ -73,7 +73,7 @@
 				<%= form_for @product, method: :get, locale: I18n.locale do |f| %>
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
 					<%= f.label :price, t("shared.price") %>:
-					<%= f.number_field :price, placeholder: t("shared.input") %>
+					<%= f.number_field :price, placeholder: t("shared.input"), id: "txt_1", onkeyup: 'saveValue(this);' %>
 				</div>
 				<div class="row">
 					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
@@ -94,7 +94,7 @@
 				<div class="row">
 					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 						<%= f.label :modelyear_id, t("shared.modelyear") %>:
-						<%= f.collection_select :modelyear_id, Modelyear.order(:id), :id, :name, :prompt => t("shared.choose") %>
+						<%= f.collection_select :modelyear_id, Modelyear.order(:id), :id, :name, {:prompt => t("shared.choose")}, id: "txt_2"%>
 					</div>
 					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 						<%= f.label :type_id, t("shared.types") %>:
@@ -114,9 +114,9 @@
 					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"><% @options.each do |option| %>
 						<ul class="list-group list-group-flush">
 							<li class="list-group-item d-flex justify-content-between align-items-center">
-							<%= truncate(option.name, length: 63) %>(<%= link_to t("shared.info"), "#",
-							data: {toggle: "modal", target: "#optionModal"} %>
-							<%= render "shared/option" %>)
+							<%= truncate(option.name, length: 63) %>
+							(<%= link_to t("shared.info"), "#", data: {toggle: "modal", target: "#optionModal#{option.id}"}%>
+							<%= render "shared/option#{option.id}" %>)
 							<span class="badge badge-primary badge-pill"><%= check_box_tag "option_ids[]", option.id %></span>
 							</li>
 						</ul>
@@ -203,6 +203,7 @@ function toggleOptions(e) {
 		x.style.display = "none";
 	}
 };//hide/unhide hop "Them Dieu Khoan"
+
 function openPage(pageName,elmnt,color) {
 	var i, tabcontent, tablinks;
 	tabcontent = document.getElementsByClassName("tabcontent");
@@ -216,6 +217,21 @@ function openPage(pageName,elmnt,color) {
 	document.getElementById(pageName).style.display = "block";
 	elmnt.style.backgroundColor = color;
 }//chon cac tab va hien thi content tuy theo tab do
-// Mac dinh mo tab co id="defaultOpen"
-document.getElementById("defaultOpen").click();
+document.getElementById("defaultOpen").click();// Mac dinh mo tab co id="defaultOpen"
+
+document.getElementById("txt_1").value = getSavedValue("txt_1");    // dat value cho truong input
+//luu du lieu vao localStorage duoi dang (ID, VALUE)
+function saveValue(e){
+    var id = e.id;  
+    var val = e.value;
+    localStorage.setItem(id, val);//luu moi khi input moi
+}
+
+//ham lay du lieu
+function getSavedValue  (v){
+    if (!localStorage.getItem(v)) {
+        return "";
+    }
+    return localStorage.getItem(v);
+}
 </script>

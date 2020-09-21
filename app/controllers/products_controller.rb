@@ -177,7 +177,7 @@ class ProductsController < ApplicationController
   end
 
   def get_productDetail
-    if params[:product].present?
+    if params[:product][:group_id].present? || params[:product][:modelyear_id].present? || params[:product][:usage_id].present? || params[:product][:type_id].present?
       @group = Group.find_by_id(params[:product][:group_id])
       @modelyear = Modelyear.find_by_id(params[:product][:modelyear_id])
       @usage = Usage.find_by_id(params[:product][:usage_id])
