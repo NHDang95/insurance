@@ -87,3 +87,30 @@ $(document).ready(function() {
     $('#car').html(options);
   });
 });
+
+$(document).ready(function(){
+    var selected_val = localStorage.getItem("group");
+    $("#group").val(selected_val);//set gia tri trong local storage lam lua chon
+    $("#group").change(function(){
+       var selected =  $("#group").val();
+       localStorage.setItem("group", selected);//set lua chon trong local storage
+    });
+    var selected_val = localStorage.getItem("usage");
+    $("#usage").val(selected_val);//set gia tri trong local storage lam lua chon
+    $("#usage").change(function(){
+       var selected =  $("#usage").val();
+       localStorage.setItem("usage", selected);//set lua chon trong local storage
+    });
+    var selected_val = localStorage.getItem("modelyear");
+    $("#modelyear").val(selected_val);//set gia tri trong local storage lam lua chon
+    $("#modelyear").change(function(){
+       var selected =  $("#modelyear").val();
+       localStorage.setItem("modelyear", selected);//set lua chon trong local storage
+    });    
+    var selected_val = localStorage.getItem("car");
+    $("#car").val(selected_val);//set gia tri trong local storage lam lua chon
+    $("#car").change(function(){
+       var selected =  $("#car").val();
+       localStorage.setItem("car", selected);//set lua chon trong local storage
+    });    
+});

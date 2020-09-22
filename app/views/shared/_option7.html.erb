@@ -12,7 +12,7 @@
       <div class="modal-body" style="padding:40px 50px;">
         <ul class="list-group list-group-flush">
           <li class="list-group-item d-flex justify-content-between align-items-center info">
-            <%= t "shared.option.description7" %>
+            <%= t "shared.option.description7" %>(<%= number_to_currency(Option.find_by_id(7).price, unit: "VNĐ", format: "%n %u", delimiter: ".", locale: :en, precision: 0) %>)
           </li>
         </ul>
       </div>
