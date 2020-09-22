@@ -73,7 +73,7 @@
 				<%= form_for @product, method: :get, local: true, locale: I18n.locale do |f| %>
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
 					<%= f.label :price, t("shared.price") %>:
-					<%= f.number_field :price, placeholder: t("shared.input"), id: "txt_1", onkeyup: 'saveValue(this);' %>
+					<%= f.number_field :price, placeholder: t("shared.input"), id: "txt_1" %><%= f.submit t("shared.check"), class: "btn btn-primary", data: { confirm: "Are you sure about your choices?" } %>
 				</div>
 				<div class="row">
 					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
@@ -117,7 +117,7 @@
 							<%= truncate(option.name, length: 63) %>
 							(<%= link_to t("shared.info"), "#", data: {toggle: "modal", target: "#optionModal#{option.id}"} %>
 							<%= render "shared/option#{option.id}" %>)
-							<span class="badge badge-primary badge-pill"><%= check_box_tag "option_ids[]", option.id %></span>
+							<span class="badge badge-primary badge-pill" id="options"><%= check_box_tag "option_ids[]", option.id %></span>
 							</li>
 						</ul>
 					<% end %>
@@ -127,15 +127,8 @@
 					<%= f.label :fee, t("shared.fee") %>:
 					<%= number_to_currency(@product.fee, unit: "VNĐ", format: "%n %u", delimiter: ".", locale: :en, precision: 0) %>
 				</div>
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><%= f.submit t("shared.check"), class: "btn btn-primary", data: { confirm: "Are you sure about your choices?" } %></div>
 				<% end %>
-				<div class="clearfix"></div>
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						<%= link_to t("shared.sendmail"), "#",
-						data: {toggle: "modal", target: "#sendmailModal"},
-						class: "btn btn-primary" %>
-					</div>
-					<%= render "shared/send_mail" %>
+				<div class="clearfix"></div>					
 				<% end %>
 			</div>
 		<% else %>
@@ -191,6 +184,9 @@
 			</div>
 		<% end %>
 		<i style="float: right"><%= link_to t("shared.back"), :back, class: "btn btn-warning" %></i>
+		<i style="float: right"><button class="btn btn-info" onclick="clearer()">Clear All</button></i>
+		<i style="float: right"><%= link_to t("shared.sendmail"), "#", data: {toggle: "modal", target: "#sendmailModal"}, class: "btn btn-primary" %></i>
+		<%= render "shared/send_mail" %>
 	</div>
 </div>
 <script>
@@ -219,19 +215,11 @@ function openPage(pageName,elmnt,color) {
 }//chon cac tab va hien thi content tuy theo tab do
 document.getElementById("defaultOpen").click();// Mac dinh mo tab co id="defaultOpen"
 
-
-document.getElementById("txt_1").value = getSavedValue("txt_1");    // dat value cho truong input
-//luu du lieu vao localStorage duoi dang (ID, VALUE)
-function saveValue(e){
-    var id = e.id;  
-    var val = e.value;
-    localStorage.setItem(id, val);//luu moi khi input moi
-}
-//ham lay du lieu
-function getSavedValue  (v){
-    if (!localStorage.getItem(v)) {
-        return "";
-    }
-    return localStorage.getItem(v);
+function clearer(){
+	document.getElementById("txt_1").value = "";
+	document.getElementById("group").value = "";
+	document.getElementById("modelyear").value = "";
+	document.getElementById("car").value = "";
+	document.getElementById("usage").value = "";	
 }
 </script>

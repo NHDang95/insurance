@@ -77,6 +77,7 @@ $(document).ready(function() {
   }).change();
 });
 
+//thay doi list car theo group
 $(document).ready(function() {
   $("#group").change(function() {
     if ($(this).data('options') === undefined) {
@@ -89,28 +90,39 @@ $(document).ready(function() {
 });
 
 $(document).ready(function(){
-    var selected_val = localStorage.getItem("group");
-    $("#group").val(selected_val);//set gia tri trong local storage lam lua chon
+    var selected_val = sessionStorage.getItem("group");
+    $("#group").val(selected_val);//set gia tri trong session storage lam lua chon
     $("#group").change(function(){
        var selected =  $("#group").val();
-       localStorage.setItem("group", selected);//set lua chon trong local storage
+       sessionStorage.setItem("group", selected);//set lua chon trong session storage
     });
-    var selected_val = localStorage.getItem("usage");
-    $("#usage").val(selected_val);//set gia tri trong local storage lam lua chon
+    var selected_val = sessionStorage.getItem("usage");
+    $("#usage").val(selected_val);//set gia tri trong session storage lam lua chon
     $("#usage").change(function(){
        var selected =  $("#usage").val();
-       localStorage.setItem("usage", selected);//set lua chon trong local storage
+       sessionStorage.setItem("usage", selected);//set lua chon trong session storage
     });
-    var selected_val = localStorage.getItem("modelyear");
-    $("#modelyear").val(selected_val);//set gia tri trong local storage lam lua chon
-    $("#modelyear").change(function(){
-       var selected =  $("#modelyear").val();
-       localStorage.setItem("modelyear", selected);//set lua chon trong local storage
-    });    
-    var selected_val = localStorage.getItem("car");
-    $("#car").val(selected_val);//set gia tri trong local storage lam lua chon
+    var selected_val = sessionStorage.getItem("car");
+    $("#car").val(selected_val);//set gia tri trong session storage lam lua chon
     $("#car").change(function(){
        var selected =  $("#car").val();
-       localStorage.setItem("car", selected);//set lua chon trong local storage
+       sessionStorage.setItem("car", selected);//set lua chon trong session storage
+    });
+    var selected_val = sessionStorage.getItem("modelyear");
+    $("#modelyear").val(selected_val);//set gia tri trong session storage lam lua chon
+    $("#modelyear").change(function(){
+       var selected =  $("#modelyear").val();
+       sessionStorage.setItem("modelyear", selected);//set lua chon trong session storage
     });    
+    var selected_val = sessionStorage.getItem("txt_1");
+    $("#txt_1").val(selected_val);//set gia tri trong session storage lam lua chon
+    $("#txt_1").change(function(){
+       var selected =  $("#txt_1").val();
+       sessionStorage.setItem("txt_1", selected);//set lua chon trong session storage
+    });
+});
+$(document).ready(function(){
+  $(window).unload(function(){
+    localStorage.clear();
+  });
 });
