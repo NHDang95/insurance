@@ -22,6 +22,7 @@ Rails.application.config.assets.precompile += %w( santafe.png )
 Rails.application.config.assets.precompile += %w( application_dashboard.css )
 Rails.application.config.assets.precompile += %w( application_dashboard.js )
 Rails.application.config.assets.precompile += %w( gbh.png )
+Rails.application.config.assets.precompile += %w( news.png )
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.

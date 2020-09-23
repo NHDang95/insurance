@@ -12,9 +12,6 @@ class ProductsController < ApplicationController
       calculate_fee
       more_options
       get_productDetail
-    else 
-      flash[:error] = t("shared.error_messages.criteria")
-      redirect_to @product
     end
   end
 

@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
   before_action :get_article, only: :show
   
   def index
-  	@articles = Article.distinct.paginate(:page => params[:page], :per_page => 10).order(created_at: :desc)
+  	@articles = Article.distinct.paginate(:page => params[:page], :per_page => 9).order(created_at: :desc)
   end
 
   def show;end

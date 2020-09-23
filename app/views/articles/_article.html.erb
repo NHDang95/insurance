@@ -1,21 +1,26 @@
-<% @articles.each_slice(5) do |articles| %>
 <div class="clearfix"></div>
+<div class="container">
+	<%= image_tag "news.png" %>
+</div>
 <div class="container_fullwidth">
-		<div class="row" style="text-align: center; display: inline-flex; background-color: #f0f0f0">
-			<% articles.each do |article| %>
-			<div class="col-sm-6 col-md-6" style= "border: 14px solid #ffffff">
-				<div class="card" style="width: 18rem;">
-					<%= image_tag article.image_url(:thumb), class: "card-img-top" if article.image? %>
-					<div class="card-body">
-						<h4 class="card-title">
-						<b><%= truncate(article.title, length: 50) %></b></h4>
-						<h5><%= time_ago_in_words(article.created_at) %><%= t"shared.ago" %></h5>
-						<p class="card-text"><%= truncate(article.description, length: 110) %></p>
-						<i><%= link_to t("static_pages.home.more_detail"), article_path(article), class: "btn btn-info" %></i>
-					</div>
+	<% @articles.each_slice(3) do |articles| %>
+	<br/>
+	<br/>
+	<div class="row">
+		<% articles.each do |article| %>
+		<div class="col-md-4">
+			<div class="card">
+				<%= image_tag article.image_url, size: "200x200", class: "card-img-top" if article.image? %>
+				<div class="card-body" style="text-align: left">
+					<h4 class="card-title">
+					<b><%= truncate(article.title, length: 50) %></b></h4>
+					<h5><i class="fa fa-calendar"> <%= article.created_at.strftime("%d/%m/%Y") %></i></h5>
+					<p class="card-text"><%= truncate(article.description, length: 110) %></p>
+					<i style="float: right"><%= link_to t("static_pages.home.more_detail"), article_path(article), class: "btn btn-success" %></i>
 				</div>
 			</div>
-			<% end %>
 		</div>
+		<% end %>
+	</div>
+	<% end %>
 </div>
-<% end %>

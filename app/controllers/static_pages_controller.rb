@@ -1,6 +1,7 @@
 class StaticPagesController < ApplicationController
   def home
-    @articles = Article.all.limit(3).order(created_at: :desc)
+    @articles = Article.all.limit(8).order(created_at: :desc)
+    @products = Product.where(parent_id: 3)
   end
   
   def show

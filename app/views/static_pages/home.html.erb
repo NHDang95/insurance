@@ -49,22 +49,31 @@
       <div class="hot-products">
         <section>
           <div class="row">
-            <div class="jumbotron full-text-title" style="background-color: #DEE4E7;">
+            <div class="jumbotron full-text-title" style="background-color: #f0f0f0;">
               <div class="row">
-                <div class="col-sm-12">
+                <% @products.each do |product| %>
+                <div class="col-sm-6">
                   <div class="table">
                     <div class="table-cell">
-                      <h2 class="text-center">Tiêu đề</h2>
-                      <p class="text-center">D&H Việt Nam tự hào tiên phong mang đến trải nghiệm hoàn toàn mới về bộ hợp đồng bảo hiểm theo tiêu chuẩn dễ hiểu để khách hàng biết được quyền lợi của mình một cách dễ dàng.</p>
+                      <h2 class="text-center"><%= product.name %></h2>
+                      <% if product.id == 4 %>
+                        <p class="text-center"><%= t"layouts.header.description1" %>
+                      <% else %>
+                        <p class="text-center"><%= t"layouts.header.description2" %>                      
+                      <% end %>
+                      </p>
                     </div>
-                  </div>
+                    </div>
                   <div>
+                    <div style="float: right;"><%= link_to t("shared.info"), product, class: "btn btn-success" %></div>
                   </div>
                 </div>
+                <% end %>
               </div>
             </div>
           </div>
         </section>
+        <h1><%= t "layouts.header.articles" %></h1>
         <%= render partial: "shared/article"%>
       </div> <!-- end hot-product -->
       <div class="clearfix"></div>

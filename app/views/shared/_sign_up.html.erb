@@ -31,12 +31,6 @@
             class: "form-control" %>
           </div>
           <div class="form-group">
-            <span class="fa fa-address-card"></span>
-            <%= f.label :address, t(".address") %>:<br/>
-            <%= f.text_field :address, autocomplete: "address",
-            class: "form-control" %>
-          </div>
-          <div class="form-group">
             <span class="fa fa-eye"></span>
             <%= f.label :password, t("devise.sessions.new.password") %>:<br/>
             <%= f.password_field :password, autocomplete: "off",
