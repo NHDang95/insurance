@@ -183,7 +183,7 @@
 			</div>
 		<% end %>
 		<i style="float: right"><%= link_to t("shared.back"), :back, class: "btn btn-warning" %></i>
-		<i style="float: right"><button class="btn btn-success" onclick="clearer()">Clear All</button></i>
+		<i style="float: right"><button class="btn btn-success" onclick="clearer()"><%= t"shared.clear" %></button></i>
 		<i style="float: right"><%= link_to t("shared.sendmail"), "#", data: {toggle: "modal", target: "#sendmailModal"}, class: "btn btn-success" %></i>
 		<%= render "shared/send_mail" %>
 	</div>

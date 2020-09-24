@@ -303,6 +303,7 @@ en:
     goods: "Rights"
     warning: "(leave blank if you are an user)"
     submit: "Are you sure about your choices?"      
+    clear: "Clear all options"
     article:
       title: "Title"
       date: "Date created"
