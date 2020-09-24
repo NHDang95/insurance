@@ -114,15 +114,4 @@ $(document).ready(function(){
        var selected =  $("#modelyear").val();
        sessionStorage.setItem("modelyear", selected);//set lua chon trong session storage
     });    
-    var selected_val = sessionStorage.getItem("txt_1");
-    $("#txt_1").val(selected_val);//set gia tri trong session storage lam lua chon
-    $("#txt_1").change(function(){
-       var selected =  $("#txt_1").val();
-       sessionStorage.setItem("txt_1", selected);//set lua chon trong session storage
-    });
-});
-$(document).ready(function(){
-  $(window).unload(function(){
-    localStorage.clear();
-  });
 });

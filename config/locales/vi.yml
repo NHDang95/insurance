@@ -301,7 +301,8 @@ vi:
     range: "Phạm vi bảo hiểm"
     benefit: "Lợi ích"
     goods: "Quyền lợi"
-    warning: "(để trống nếu bạn đã là người dùng trang web)"    
+    warning: "(để trống nếu bạn đã là người dùng trang web)"  
+    submit: "Bạn đã chắc chắn về các lựa chọn của mình?"  
     article:
       title: "Tiêu đề"
       date: "Ngày tạo"    
@@ -327,7 +328,7 @@ vi:
     error_messages:
       error: "lỗi"
       the_form_contains: "Đã có lỗi xảy ra"
-      price: "Giá trị thực tế không thể âm"      
+      price: "Giá trị thực tế không thể âm hoặc để trống"      
       criteria: "Xin hãy lựa chọn tất cả các tiêu chí" 
       send_mail: "Đã có lỗi xảy ra khi đăng ký nhận tư vấn"
     message:

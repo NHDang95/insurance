@@ -70,10 +70,10 @@
 				<% if !current_user.try(:admin?) %>
 				<h1><%= t("shared.check") %></h1>
 				<h4><%= t("shared.descript")%></h4>
-				<%= form_for @product, method: :get, local: true, locale: I18n.locale do |f| %>
+				<%= form_for @product, method: :get, locale: I18n.locale do |f| %>
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
 					<%= f.label :price, t("shared.price") %>:
-					<%= f.number_field :price, placeholder: t("shared.input"), id: "txt_1" %><%= f.submit t("shared.check"), class: "btn btn-primary", data: { confirm: "Are you sure about your choices?" } %>
+					<%= f.text_field :price, placeholder: t("shared.input"), id: "txt_1", data: {autonumeric: {aSign: 'VNĐ ', mDec: 0}} %><%= f.submit t("shared.check"), class: "btn btn-success", id: "form-submit" %>
 				</div>
 				<div class="row">
 					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
@@ -109,9 +109,8 @@
 				</div>
 				<button onclick="toggleOptions(event)"><%= t("shared.options") %></button>
 				<div id="choices" style="display: none">
-					<div class="col-md-3">
-					</div>
-					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"><% @options.each do |option| %>
+					<% @options.each do |option| %>
+					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 						<ul class="list-group list-group-flush">
 							<li class="list-group-item d-flex justify-content-between align-items-center">
 							<%= truncate(option.name, length: 63) %>
@@ -120,8 +119,8 @@
 							<span class="badge badge-primary badge-pill" id="options"><%= check_box_tag "option_ids[]", option.id %></span>
 							</li>
 						</ul>
-					<% end %>
 					</div>
+					<% end %>
 				</div>
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="font-size: 150%">
 					<%= f.label :fee, t("shared.fee") %>:
@@ -184,8 +183,8 @@
 			</div>
 		<% end %>
 		<i style="float: right"><%= link_to t("shared.back"), :back, class: "btn btn-warning" %></i>
-		<i style="float: right"><button class="btn btn-info" onclick="clearer()">Clear All</button></i>
-		<i style="float: right"><%= link_to t("shared.sendmail"), "#", data: {toggle: "modal", target: "#sendmailModal"}, class: "btn btn-primary" %></i>
+		<i style="float: right"><button class="btn btn-success" onclick="clearer()">Clear All</button></i>
+		<i style="float: right"><%= link_to t("shared.sendmail"), "#", data: {toggle: "modal", target: "#sendmailModal"}, class: "btn btn-success" %></i>
 		<%= render "shared/send_mail" %>
 	</div>
 </div>

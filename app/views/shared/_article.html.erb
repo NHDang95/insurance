@@ -7,12 +7,12 @@
       </h2>
     </div>
     <div class="panel-body">
-      <div class="card-img-top" style="float: left;">
+      <div style="float: left;">
         <%= image_tag article.image_url(:thumb) if article.image? %>
         <h6><i class="fa fa-calendar"> <%= article.created_at.strftime("%d/%m/%Y") %></i></h6>
       </div>
       <div>
-        <p><%= truncate(article.description, length: 60) %></p>
+        <p><%= truncate(article.description, length: 110) %></p>
       </div>
     </div>
     <div class="panel-footer">

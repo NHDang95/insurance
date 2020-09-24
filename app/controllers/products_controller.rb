@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
 
   def show
     @options = Option.all.order(:name)
-    if params[:commit] == "Tra phí" && params[:product][:price].to_i > 0
+    if params[:commit] == "Tra phí"
       check_criteria
       calculate_fee
       more_options
@@ -52,7 +52,7 @@ class ProductsController < ApplicationController
   end
 
   def check_criteria
-    if params[:product][:price].to_i < 0
+    if params[:product][:price].to_i <= 0
       flash[:error] = t("shared.error_messages.price")
       redirect_to @product
     elsif params[:product][:group_id].blank?
@@ -182,7 +182,8 @@ class ProductsController < ApplicationController
       @modelyear = Modelyear.find_by_id(params[:product][:modelyear_id])
       @usage = Usage.find_by_id(params[:product][:usage_id])
       @type = Type.find_by_id(params[:product][:type_id])
-      session[:product] = [@group.name, @modelyear.name, @usage.name, @type.name, @type.brand.name]
+      @price = params[:product][:price]
+      session[:product] = [@group.name, @modelyear.name, @usage.name, @type.name, @type.brand.name, @price]
     end
   end
 

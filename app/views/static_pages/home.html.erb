@@ -1,7 +1,7 @@
 <div class="clearfix"></div>
 <div class="home-slider">
   <div class="container">
-    <div id="sequence">
+    <div>
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -12,34 +12,32 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
           <div class="item active center">
-            <%= image_tag "mazda6.png" %>
+            <%= image_tag "mazda6.png", class: "img-responsive" %>
             <div class="carousel-caption">
               <h3 style="color: red;">Mazda 6</h3>
             </div>
           </div>
           <div class="item center">
-            <%= image_tag "santafe.png" %>
+            <%= image_tag "santafe.png", class: "img-responsive" %>
             <div class="carousel-caption">
               <h3 style="color: red;">Santa Fe</h3>
             </div>
           </div>
           <div class="item center">
-            <%= image_tag "vios.png" %>
+            <%= image_tag "vios.png", class: "img-responsive" %>
             <div class="carousel-caption">
               <h3 style="color: red;">Vios</h3>
             </div>
           </div>
         </div>
-        <!-- Left and right controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-          </a>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-          <a class="right carousel-control" href="#myCarousel" data-slide="next">
-          </a>
-        </a>
       </div>
+      <!-- Left and right controls -->      
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev"></a>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <a class="right carousel-control" href="#myCarousel" data-slide="next"></a>
+      </a>      
     </div>
   </div>
 </div>  <!-- end home-slider -->

@@ -35,6 +35,7 @@ gem "mini_magick", "3.8.0"
 gem "will_paginate"
 gem "delayed_job_active_record"
 gem "figaro"
+gem 'autonumeric-rails'
 
 # Use CoffeeScript for .coffee assets and views
 gem "coffee-rails", "~> 4.2"

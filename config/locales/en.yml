@@ -302,6 +302,7 @@ en:
     benefit: "Benefits"    
     goods: "Rights"
     warning: "(leave blank if you are an user)"
+    submit: "Are you sure about your choices?"      
     article:
       title: "Title"
       date: "Date created"

@@ -26,4 +26,5 @@
 //= require header
 //= require insurance
 //= require tinymce
+//= require autonumeric
 
