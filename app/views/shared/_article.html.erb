@@ -14,8 +14,6 @@
       <div>
         <p><%= truncate(article.description, length: 110) %></p>
       </div>
-    </div>
-    <div class="panel-footer">
       <i style="float: right;"><%= link_to t("static_pages.home.more_detail"), article_path(article, locale: I18n.locale), class: "btn btn-success" %></i>
     </div>
 </section>

@@ -7,11 +7,11 @@ class ProductsController < ApplicationController
 
   def show
     @options = Option.all.order(:name)
-    if params[:commit] == "Tra phí"
+    if params[:commit] == "Tra Phí Bảo Hiểm"
       check_criteria
+      get_productDetail      
       calculate_fee
       more_options
-      get_productDetail
     end
   end
 

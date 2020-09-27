@@ -283,7 +283,7 @@ vi:
     ago: " trước"
     create: "Tạo mới"
     back: "Quay lại"  
-    check: "Tra phí"      
+    check: "Tra Phí Bảo Hiểm"      
     choose: "Vui lòng chọn một mục"    
     usage: "Mục đích sử dụng"
     groupy: "Nhóm xe"
@@ -303,7 +303,7 @@ vi:
     goods: "Quyền lợi"
     warning: "(để trống nếu bạn đã là người dùng trang web)"  
     submit: "Bạn đã chắc chắn về các lựa chọn của mình?"  
-    clear: "Xóa tất cả lựa chọn"    
+    clear: "Xóa lựa chọn"    
     article:
       title: "Tiêu đề"
       date: "Ngày tạo"    

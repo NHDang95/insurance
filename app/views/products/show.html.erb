@@ -1,4 +1,3 @@
-<script type="text/javascript" src="assets/javascripts/insurance.js"></script>
 <div class="clearfix"></div>
 <div class="container_fullwidth">
 	<div class="container">
@@ -73,7 +72,7 @@
 				<%= form_for @product, method: :get, locale: I18n.locale do |f| %>
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
 					<%= f.label :price, t("shared.price") %>:
-					<%= f.text_field :price, placeholder: t("shared.input"), id: "txt_1", data: {autonumeric: {aSign: 'VNĐ ', mDec: 0}} %><%= f.submit t("shared.check"), class: "btn btn-success", id: "form-submit" %>
+					<%= f.text_field :price, placeholder: t("shared.input"), id: "txt_1", data: {autonumeric: {aSign: 'VNĐ ', mDec: 0}} %>
 				</div>
 				<div class="row">
 					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
@@ -126,8 +125,10 @@
 					<%= f.label :fee, t("shared.fee") %>:
 					<%= number_to_currency(@product.fee, unit: "VNĐ", format: "%n %u", delimiter: ".", locale: :en, precision: 0) %>
 				</div>
+				<div><%= f.submit t("shared.check"), class: "btn btn-success", data: { confirm: "#{t("devise.registrations.edit.are_you_sure")}"} %></div>
 				<% end %>
 				<div class="clearfix"></div>					
+				<i><button class="btn btn-danger" onclick="clearer()"><%= t"shared.clear" %></button></i>				
 				<% end %>
 			</div>
 		<% else %>
@@ -183,7 +184,6 @@
 			</div>
 		<% end %>
 		<i style="float: right"><%= link_to t("shared.back"), :back, class: "btn btn-warning" %></i>
-		<i style="float: right"><button class="btn btn-success" onclick="clearer()"><%= t"shared.clear" %></button></i>
 		<i style="float: right"><%= link_to t("shared.sendmail"), "#", data: {toggle: "modal", target: "#sendmailModal"}, class: "btn btn-success" %></i>
 		<%= render "shared/send_mail" %>
 	</div>
@@ -220,5 +220,7 @@ function clearer(){
 	document.getElementById("modelyear").value = "";
 	document.getElementById("car").value = "";
 	document.getElementById("usage").value = "";	
+	sessionStorage.clear();
+	localStorage.clear();
 }
 </script>

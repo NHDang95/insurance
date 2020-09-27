@@ -10,35 +10,34 @@
           </div>
           <div class="col-md-6 col-sm-6">
             <h3><%= t".contact" %>: </h3><h4 class="title"><%= t".phone" %></h4>
-            <div class="row">
-              <div class="col-md-6 col-sm-6"><a><%= link_to t("layouts.header.rights"), static_pages_rights_path(locale: I18n.locale) %></a></div>
-              <div class="col-md-6 col-sm-6"><a><%= link_to t("layouts.header.article"), articles_path(locale: I18n.locale) %></a></div>
+            <div class="row wow">
+              <div class="col-md-6 col-sm-6"><%= link_to t("layouts.header.rights"), static_pages_rights_path(locale: I18n.locale) %></div>
+              <div class="col-md-6 col-sm-6"><%= link_to t("layouts.header.article"), articles_path(locale: I18n.locale) %></div>
             </div>
-            <div class="row">
-              <div class="col-md-6 col-sm-6"><a><%= link_to t(".help"), static_pages_fee_path(locale: I18n.locale) %></a></div>
-              <div class="col-md-6 col-sm-6"><a><%= link_to t(".about_us"), static_pages_about_path(locale: I18n.locale) %></a></div>
+            <div class="row wow">
+              <div class="col-md-6 col-sm-6"><%= link_to t(".help"), static_pages_fee_path(locale: I18n.locale) %></div>
+              <div class="col-md-6 col-sm-6"><%= link_to t(".about_us"), static_pages_about_path(locale: I18n.locale) %></div>
             </div>
           </div>
-        </div>
         </div> <!-- end row -->
-        </div> <!-- end container -->
-        </div> <!-- end footer-info -->
-        <div class="copyright-info">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-6">
-                <p>Copyright © 2018. Designed by <a href="#">D&H</a>. All rights reseved</p>
-              </div>
-              <div class="col-md-6">
-                <ul class="social-icon">
-                  <li><a href="#" class="linkedin"></a></li>
-                  <li><a href="#" class="google-plus"></a></li>
-                  <li><a href="#" class="twitter"></a></li>
-                  <li><a href="#" class="facebook"></a></li>
-                </ul>
-              </div>
-            </div>
+      </div> <!-- end container -->
+    </div> <!-- end footer-info -->
+    <div class="copyright-info">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <p>Copyright © 2018. Designed by <a href="#">D&H</a>. All rights reseved</p>
+          </div>
+          <div class="col-md-6">
+            <ul class="social-icon">
+              <li><a href="#" class="linkedin"></a></li>
+              <li><a href="#" class="google-plus"></a></li>
+              <li><a href="#" class="twitter"></a></li>
+              <li><a href="#" class="facebook"></a></li>
+            </ul>
           </div>
         </div>
-        </div> <!-- end footer -->
       </div>
+    </div>
+  </div> <!-- end footer -->
+</div>

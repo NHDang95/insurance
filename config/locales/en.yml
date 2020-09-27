@@ -283,7 +283,7 @@ en:
     ago: " ago"
     create: "Create"
     back: "Back"
-    check: "Fee Checker"
+    check: "Insurance Fee Checker"
     choose: "Please Choose One"
     usage: "Usage"
     group: "Car Group"
@@ -303,7 +303,7 @@ en:
     goods: "Rights"
     warning: "(leave blank if you are an user)"
     submit: "Are you sure about your choices?"      
-    clear: "Clear all options"
+    clear: "Clear criterias"
     article:
       title: "Title"
       date: "Date created"

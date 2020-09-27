@@ -397,8 +397,8 @@ button {
 
 .button:hover,
 button:hover {
-  border: 1px solid #fe5252;
-  color: #fe5252;
+  border: 1px solid #0f0;
+  color: #0f0;
 }
 
 /* end of global estyle-------------------------------------------------- */
@@ -612,6 +612,14 @@ button:hover {
 
 .usermenu li:first-child {
   margin-left: 0;
+}
+
+.usermenu li:hover {
+  color: #0f0;
+}
+
+.usermenu a:hover{
+  color: #0f0;
 }
 
 .usermenu li a {
@@ -1896,6 +1904,64 @@ option {
 .review:last-child {
   border: none;
 }
+
+/**************************************/
+
+/* Floating Social Media Bar Style */
+
+.fl-fl {
+  background: #555;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  padding: 4px;
+  width: 190px;
+  position: fixed;
+  right: -162px;
+  z-index: 1000;
+  font: normal normal 10px Arial;
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  transition: all .25s ease;
+}
+
+.fa {
+  font-size: 25px;
+  color: #fff;
+  padding: 10px 0;
+  width: 40px;
+}
+
+.fl-fl:hover {
+  right: 0;
+}
+
+.fl-fl a {
+  color: #fff !important;
+  text-decoration: none;
+  text-align: center;
+  line-height: 43px!important;
+  vertical-align: top!important;
+}
+
+.float-fb {
+  top: 215px;
+}
+
+.float-tw {
+  top: 270px;
+}
+
+.float-gp {
+  top: 325px;
+}
+
+.float-ig {
+  top: 380px;
+}
+
+/* Floating Social Media Bar Style */
 
 
 /**************************************/
