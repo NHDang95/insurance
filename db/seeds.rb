@@ -20,6 +20,5 @@ end
 		created_at: "2020-09-28", 
 		updated_at: "2020-09-28", 
 		description: "Article description", 
-		image: File.open(Rails.root + "vendor/assets/images/gbh.png")
 	)
 end
