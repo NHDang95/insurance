@@ -1,9 +1,9 @@
 <% @articles.each do |article| %>
 <section>
-  <div class="panel col-sm-6 text-center" style="visibility: visible; background-color: #f0f0f0">
+  <div class="panel col-sm-4 text-center" style="visibility: visible; background-color: #f0f0f0">
     <div class="panel-heading" role="tab">
       <h2 class="panel-title">
-      <span><b><%= truncate(article.title, length: 40) %></b></span>
+      <span><b><%= truncate(article.title, length: 33) %></b></span>
       </h2>
     </div>
     <div class="panel-body">

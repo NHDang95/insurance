@@ -1,3 +1,7 @@
+$(document).ready(function(){ 
+  $('.flexslider').flexslider();
+});
+
 $(function() {
   setTimeout(function(){
     $('.alert').slideUp(1000);

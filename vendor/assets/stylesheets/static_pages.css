@@ -940,7 +940,6 @@ ul.dropdown-menu > li > a:hover {
   padding-top: 30px;
 }
 
-
 /*products */
 
 .products {
@@ -1910,7 +1909,7 @@ option {
 /* Floating Social Media Bar Style */
 
 .fl-fl {
-  background: #555;
+  background: url('black_transparent50.png') left top repeat;
   text-transform: uppercase;
   letter-spacing: 6px;
   padding: 4px;
