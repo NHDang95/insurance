@@ -5,3 +5,21 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+5.times do 
+	Brand.create(name: "Hãng xe", created_at: "2020-09-28", updated_at: "2020-09-28")
+	Usage.create(name: "Mục đích", created_at: "2020-09-28", updated_at: "2020-09-28")
+	Modelyear.create(name: "Đời xe", created_at: "2020-09-28", updated_at: "2020-09-28")
+	Group.create(name: "Nhóm xe", created_at: "2020-09-28", updated_at: "2020-09-28")
+	Type.create(name: "Loại xe", brand_id: "1", group_id: "1", usage_id: "1", created_at: "2020-09-28", updated_at: "2020-09-28")
+end
+
+10.times do 
+	Article.create(
+		title: "Article title",
+		text: "Article content", 
+		created_at: "2020-09-28", 
+		updated_at: "2020-09-28", 
+		description: "Article description", 
+		image: File.open(Rails.root + "vendor/assets/images/gbh.png")
+	)
+end
