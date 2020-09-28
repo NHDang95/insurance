@@ -263,6 +263,14 @@ en:
             li31: "Allowance for hospitalization after an accident"
             li32: "24/7 hospital fee guarantee service"            
     option:
+        opt1: "Appendix 01: Renewal of depreciation insurance"
+        opt2: "Appendix 02: Vehicle repair insurance at genuine garage"
+        opt3: "Appendix 03: Flooded vehicle insurance"
+        opt4: "Appendix 04: Part theft insurance"
+        opt5: "Appendix 05: Insurance deduction options"
+        opt6: "Appendix 06: Payment of car rental costs"
+        opt7: "Appendix 07: Limited liability insurance"
+        opt8: "Appendix 08: Insurance for damage occurring outside the territory of Vietnam"
         description1: "Appendix 01: Compensate for new replacement cost according to actual cost and does not apply deduction of depreciation of new supplies and spare parts."
         description2: "Appendix 02: On the basis of the request and acceptance of the payment of the vehicle owner / the person acting on behalf of the vehicle owner to claim insurance, the vehicle with material damage is repaired at the Genuine Factory. D&H does not accept insurance according to Appendix 02 for vehicles with use period of more than 10 years by the time of entering into the contract."
         description3: "Appendix 03: D&H will receive insurance for engine damage or electrical damage when the car enters a flooded area, the 10% deduction is not less than 3 million per 1 case (More regulations are in the section of Insurance Policies)."
@@ -294,7 +302,7 @@ en:
     fee: " Estimated Fee"    
     options: "Advanced Options"
     sendmail: "Request for Advice"
-    info: "Info"
+    info: "More Info"
     more: "Other Infos"
     home: "Introduction"
     group: "Insurance Groups"
@@ -334,6 +342,7 @@ en:
       send_mail: "There was an error in requesting for advice"
     message:
       you_sure: "Are you sure?"
+      successmail: Request was successfully sent."
   static_pages:
     home:
       more_detail: "More Details"

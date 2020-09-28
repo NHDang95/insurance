@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
 
   def show
     @options = Option.all.order(:name)
-    if params[:commit] == "Tra Phí Bảo Hiểm"
+    if params[:commit] == "Tra Phí Bảo Hiểm" || params[:commit] == "Insurance Fee Checker"
       check_criteria
       get_productDetail      
       calculate_fee
@@ -16,12 +16,12 @@ class ProductsController < ApplicationController
   end
 
   def sendmail
-    if params[:commit] == "Đăng ký nhận Tư vấn" 
+    if params[:commit] == "Đăng ký nhận Tư vấn" || params[:commit] == "Request for Advice"
       if !user_signed_in?
         if params[:user][:name].present? && params[:user][:phone].present?
           SendEmailJob.set(wait: 10.seconds).perform_later(User.find_by(id: 8),
                           params[:user].to_json, session[:product])
-          flash[:success] = "Request was successfully sent."
+          flash[:success] = t("shared.message.successmail")
           redirect_to @product
         else  
           flash[:error] = t("shared.error_messages.send_mail")
@@ -32,7 +32,7 @@ class ProductsController < ApplicationController
         params[:user][:phone] = current_user.phone
         SendEmailJob.set(wait: 10.seconds).perform_later(User.find_by(id: 8),
                         params[:user].to_json, session[:product])
-        flash[:success] = "Request was successfully sent."
+        flash[:success] = t("shared.message.successmail")
         redirect_to @product
       else  
         flash[:error] = t("shared.error_messages.send_mail")

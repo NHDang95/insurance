@@ -263,6 +263,14 @@ vi:
             li31: "Trợ cấp nằm viện sau tai nạn"
             li32: "Dịch vụ bảo lãnh viện phí 24/7"
     option:
+        opt1: "Phụ lục số 01: Bảo hiểm khấu hao thay mới"
+        opt2: "Phụ lục số 02: Bảo hiểm sửa chữa xe tại Garage chính hãng"
+        opt3: "Phụ lục số 03: Bảo hiểm xe bị ngập nước"
+        opt4: "Phụ lục số 04: Bảo hiểm mất cắp bộ phận"
+        opt5: "Phụ lục số 05: Bảo hiểm lựa chọn mức khấu trừ"
+        opt6: "Phụ lục số 06: Thanh toán chi phí thuê xe"
+        opt7: "Phụ lục số 07: Bảo hiểm bồi thường theo giới hạn trách nhiệm"
+        opt8: "Phụ lục số 08: Bảo hiểm thiệt hại xảy ra ngoài lãnh thổ Việt Nam"
         description1: "Phụ lục 01: Bồi thường chi phí thay thế mới theo chi phí thực tế và không áp dụng trừ khấu hao vật tư, phụ tùng thay thế mới."
         description2: "Phụ lục 02: Trên cơ sở yêu cầu và chấp nhận nộp phí của Chủ xe/Người thay mặt Chủ xe yêu cầu bảo hiểm, xe bị thiệt hại vật chất được sửa chữa tại Xưởng chính hãng. D&H không nhận bảo hiểm theo phụ lục 02 đối với các xe có thời gian sử dụng trên 10 năm tính đến thời điểm giao kết hợp đồng."
         description3: "Phụ lục 03: D&H sẽ nhận bảo hiểm thiệt hại động cơ hoặc hư hỏng về điện khi ô tô đi vào vùng ngập nước, mức khấu trừ 10% không dưới 3 triệu trên 1 vụ (Quy định rõ hơn nằm trong phần Quy tắc Bảo Hiểm)."
@@ -333,7 +341,8 @@ vi:
       criteria: "Xin hãy lựa chọn tất cả các tiêu chí" 
       send_mail: "Đã có lỗi xảy ra khi đăng ký nhận tư vấn"
     message:
-      you_sure: "Bạn chắc chứ?"      
+      you_sure: "Bạn chắc chứ?"     
+      successmail: "Yêu cầu đã được gửi đi."       
   static_pages:
     home:
       more_detail: "Xem chi tiết"
