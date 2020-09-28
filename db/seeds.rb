@@ -19,6 +19,6 @@ end
 		text: "Article content", 
 		created_at: "2020-09-28", 
 		updated_at: "2020-09-28", 
-		description: "Article description", 
+		description: "Article description" 
 	)
 end
