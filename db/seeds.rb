@@ -5,6 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Product.create(id: "3", name: "Bảo hiểm", created_at: "2020-09-29", updated_at: "2020-09-29")
+Product.create(id: "4", parent_id: "3", name: "Bảo hiểm sức khỏe", created_at: "2020-09-29", updated_at: "2020-09-29")
+Product.create(id: "5", parent_id: "3", name: "Bảo hiểm xe cơ giới", created_at: "2020-09-29", updated_at: "2020-09-29")
+
+
 5.times do 
 	Brand.create(name: "Hãng xe", created_at: "2020-09-28", updated_at: "2020-09-28")
 	Usage.create(name: "Mục đích", created_at: "2020-09-28", updated_at: "2020-09-28")
