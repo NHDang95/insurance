@@ -20,7 +20,7 @@
 					<td><%= brand.name.html_safe %></td>					
 					<td>
 						<% brand.types.each do |type| %>
-							<%= type.name %>   |
+							<%= link_to type.name, edit_admin_type_path(type) %>   |
 						<% end %>
 					</td>										
 					<td class="text-center">

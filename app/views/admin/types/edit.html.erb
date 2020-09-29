@@ -1,0 +1,31 @@
+<div id="page-wrapper">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-12">
+				<h2 class="page-header title"><%= t ".edit_type" %></h2>
+			</div>
+		</div>
+		<%= form_for [:admin, @type], :html => {:multipart => true} do |f| %>
+		<%= render 'shared/error_messages',object: f.object %>
+		<div class="row">
+			<div class="col-md-6">
+				<%= f.label :name, t(".name") %>:
+				<%= f.text_area :name, placeholder: t(".name") %>
+			</div>
+			<div class="col-md-3">
+				<%= f.label :group_id, t(".group") %>:
+				<div>
+					<%= f.collection_select :group_id, Group.order(:id), :id, :name %>
+				</div>
+				<%= f.label :brand_id, t(".brand") %>:
+				<div>
+					<%= f.collection_select :brand_id, Brand.order(:id), :id, :name %>
+				</div>
+			</div>				
+		</div>
+		<i style="float: right"><%= link_to t("shared.back"), :back, class: "btn btn-warning" %></i>
+		<i style="float: right"><%= link_to t(".delete"), admin_type_path(@type), method: :delete, data: {confirm: t("shared.message.you_sure")}, class: "btn btn-danger" %></i>		
+		<i style="float: right"><%= f.submit t("shared.edit"), class: "btn btn-success" %></i>
+		<% end %>
+	</div>
+</div>

@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   	namespace :admin do
   		resources :articles 
   		resources :products
-  		resources :types, only: [:new, :create]
+  		resources :types, only: [:new, :create, :edit, :update, :destroy]
   		resources :brands, only: [:index, :edit, :update, :destroy] do
   			resources :types, only: [:update]
   		end

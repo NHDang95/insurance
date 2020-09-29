@@ -83,6 +83,12 @@ en:
       new:
         new_type: "Create a Type"
         name: "Type Name"
+      edit: 
+        edit_type: "Edit Type"
+        name: "Type Name"
+        group: "Group"
+        usage: "Brand"
+        delete: "Delete"
     articles:
       index: 
         article_list: "Article List"
