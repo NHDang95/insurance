@@ -300,7 +300,7 @@ en:
     check: "Insurance Fee Checker"
     choose: "Please Choose One"
     usage: "Usage"
-    group: "Car Group"
+    groupy: "Car Group"
     modelyear: "Model Year"
     input: "Enter a price"
     descript: "Checking Estimated Insurance Fee based on criterias below:"
