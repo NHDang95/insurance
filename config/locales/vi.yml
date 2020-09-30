@@ -304,7 +304,7 @@ vi:
     modelyear: "Đời xe"
     input: "Nhập giá trị xe"
     descript: "Kiểm tra Phí Bảo hiểm dựa theo các tiêu chí dưới đây:"      
-    price: "Giá sản phẩm"      
+    price: "Giá thực tế"      
     fee: "Phí bảo hiểm dự tính"
     options: "Thêm điều khoản"
     sendmail: "Đăng ký nhận Tư vấn"

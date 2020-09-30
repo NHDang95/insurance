@@ -10,7 +10,6 @@
 		<% if @params.present? %>
 		<ul><span style="font-size: 150%">Thông tin về xe của khách hàng <b><i><%= JSON.parse(@parameters)['name']%></i></b> như sau:</span>
 			<li>Xe thuộc hãng: <b><i><%= @params[4] %></i></b></li>
-			<li>Xe khách hàng là loại: <b><i><%= @params[3] %></i></b></li>
 			<li>Thuộc loại xe có trọng tải: <b><i><%= @params[0] %></i></b></li>
 			<li>Xe có tuổi đời: <b><i><%= @params[1] %></i></b></li>
 			<li>Khách hàng dự định tham gia bảo hiểm dưới hình thức: <b><i><%= @params[2] %></i></b></li>
