@@ -122,6 +122,8 @@
 					<% end %>
 				</div>
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><%= f.submit t("shared.check"), class: "btn btn-success", data: { confirm: "#{t("devise.registrations.edit.are_you_sure")}"} %></div>
+				<!-- modal hien thi cac option va ket qua tra phi -->
+				<% if session[:product].present? %>				
 				<div class="modal fade" id="checkModal" role="dialog">
 				  <div class="modal-dialog">
 				    <div class="modal-content">
@@ -165,7 +167,8 @@
 				    </div>
 				  </div>
 				</div>
-				<% end %>
+				<% end %> <!-- end modal check -->
+				<% end %> <!-- end form_for -->
 				<div class="clearfix"></div>					
 				<i><button class="btn btn-danger" onclick="clearer()"><%= t"shared.clear" %></button></i>				
 				<% end %>

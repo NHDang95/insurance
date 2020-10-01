@@ -152,27 +152,11 @@ class ProductsController < ApplicationController
 
   def more_options
     if params[:option_ids].present?
-      if params[:option_ids].include?("1")
-        @product.fee = @product.fee.to_i + Option.find_by(id: 1).price.to_i
+      params[:option_ids].each do |a|
+        if params[:option_ids].include?(a)
+          @product.fee = @product.fee.to_i + Option.find_by(id: a).price.to_i
+        end
       end
-      if params[:option_ids].include?("2")
-        @product.fee = @product.fee.to_i + Option.find_by(id: 2).price.to_i
-      end         
-      if params[:option_ids].include?("3")
-        @product.fee = @product.fee.to_i + Option.find_by(id: 3).price.to_i
-      end         
-      if params[:option_ids].include?("4")
-        @product.fee = @product.fee.to_i + Option.find_by(id: 4).price.to_i
-      end         
-      if params[:option_ids].include?("5")
-        @product.fee = @product.fee.to_i + Option.find_by(id: 5).price.to_i
-      end         
-      if params[:option_ids].include?("6")
-        @product.fee = @product.fee.to_i + Option.find_by(id: 6).price.to_i
-      end         
-      if params[:option_ids].include?("7")
-        @product.fee = @product.fee.to_i + Option.find_by(id: 7).price.to_i
-      end               
     end
   end
 

@@ -4,6 +4,7 @@ $(function() {
   }, 1000);
 });
 
+//disable usage neu chon group la xe tai or xe bus
 $(document).ready(function() {
   // bind change event handler
   $('#group').change(function() {
@@ -13,7 +14,7 @@ $(document).ready(function() {
   }).change();
 });
 
-//thay doi list car theo group
+//thay doi list car theo lua chon cua group
 $(document).ready(function() {
   $("#group").change(function() {
     if ($(this).data('options') === undefined) {
@@ -25,6 +26,7 @@ $(document).ready(function() {
   });
 });
 
+//luu lua chon sau khi tra phi
 $(document).ready(function(){
     var selected_val = sessionStorage.getItem("group");
     $("#group").val(selected_val);//set gia tri trong session storage lam lua chon
@@ -50,4 +52,5 @@ $(document).ready(function(){
        var selected =  $("#modelyear").val();
        sessionStorage.setItem("modelyear", selected);//set lua chon trong session storage
     });    
+    var logoutTimer = setTimeout(function() { sessionStorage.clear(); }, 30000);//xoa session storage sau 30s
 });
