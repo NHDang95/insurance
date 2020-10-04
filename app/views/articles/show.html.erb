@@ -1,12 +1,13 @@
 <div class="clearfix"></div>
-<div class="container_fullwidth">
-	<div class="container">
-		<div class="hot-products" style="background-color: #f0f0f0">
+<div class="container_fullwidth fee-page">
+	<%= render "shared/banner_page", title: @article.title.upcase, breadscrumb: [{url: "/", title: 'Trang chủ'}, {url: "/articles", title: 'Bài viết'}] %>
+	<div class="hot-products">
+		<div class="container">
+			<%= image_tag @article.image_url(:full) if @article.image? %>
 			<h2><b><%= @article.title.upcase %></b></h2>
 			<h4><b><%= @article.description %></b></h4>
-			<p><%= image_tag @article.image_url(:large_thumb) if @article.image? %><%= @article.text.html_safe if !@article.text.nil? %></p>
+			<p><%= @article.text.html_safe if !@article.text.nil? %></p>
 			<div class="clearfix"></div>
 		</div>
-		<i style="float: right"><%= link_to t("shared.back"), :back, class: "btn btn-warning" %></i>
 	</div>
 </div>

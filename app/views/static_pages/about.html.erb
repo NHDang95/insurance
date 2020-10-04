@@ -1,7 +1,8 @@
 <div class="clearfix"></div>
-<div class="container_fullwidth">
-	<div class="container">
-		<div class="hot-products">
+<div class="container_fullwidth fee-page">
+	<%= render "shared/banner_page", title: t("layouts.header.contact").upcase, breadscrumb: [{url: "/", title: 'Trang chủ'}, {url: "/lien-he", title: 'Liên hệ'}, {url: '#', title: "Thông tin liên hệ"}] %>
+	<div class="hot-products">
+		<div class="container">
 			<h2 class="contact-title" style="text-align: center;"><strong><%= t".info" %></strong></h2>
 			<h5 class="contact-infoormation" style="text-align: center;"><%= t".description1" %></h5>
 			<section>
@@ -12,6 +13,5 @@
 			<h3 style="text-align: center;"><%= t"address" %></h3>
 			<h3 style="text-align: center;"><%= t"hotline" %></h3>
 		</div>
-		<i style="float: right"><%= link_to t("shared.back"), :back, class: "btn btn-warning" %></i>
 	</div>
 </div>
