@@ -63,3 +63,19 @@
 .header-bar {
   height: 100px;
 }
+
+.carousel-inner > .item > a > img,
+.carousel-inner > .item > img,
+.img-responsive,
+.thumbnail a > img,
+.thumbnail > img {
+  height: 500px;
+  margin: 0 auto;
+}
+
+.carousel-control {
+  &.left,
+  &.right {
+    background-image: unset;
+  }
+}

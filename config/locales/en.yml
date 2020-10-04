@@ -182,6 +182,10 @@ en:
       description2: "AUTOMOBILE INSURANCE: Compulsory automobile insurance is insurance for car owners in accordance with the law. This insurance is effective for 3rd party insurance when an accident occurs. That is, if the owner of a car causes an accident for another person, the insurance company will be responsible for compensating those who got it."
     footer:
       contact: "Contact"
+      information: "Information"
+      service: "Service"
+      language: "Language"
+      new_post: "New Posts"
       info: "Info"
       phone: "098.601.9195"
       about_us: "About us"

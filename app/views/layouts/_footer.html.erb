@@ -4,20 +4,53 @@
     <div class="footer-info">
       <div class="container">
         <div class="row">
-          <div class="col-md-3">
-            <div class="footer-logo"><%= link_to(image_tag("logo.jpg", size: '100'), root_path) %>
+          <div class="col-md-12">
+            <div class="menu-footer">
+              <ul>
+                <li><a href="/mua-bao-hiem-online-giao-bao-hiem-tan-nha-tai-63-tinh-thanh-pho/" data-wpel-link="internal">Giới thiệu</a></li>
+                <li><a href="/huong-dan-mua-bao-hiem-truc-tuyen-tai-ibaoviet-vn/" data-wpel-link="internal">Hướng dẫn mua bảo hiểm</a></li>
+                <li><a href="/tin-tuc/" data-wpel-link="internal">Tin tức và sự kiện</a></li>
+                <li><a href="/mot-luu-y-khi-tham-gia-bao-hiem/" data-wpel-link="internal">Lưu ý khi tham gia bảo hiểm</a></li>
+                <li><a href="/thong-diep-phat-trien-ben-vung-vi-nhung-niem-tin-cua-ban/" data-wpel-link="internal">Thông điệp</a></li>
+                <li><a href="/lien-he/" data-wpel-link="internal">Liên hệ</a></li>
+              </ul>
             </div>
           </div>
-          <div class="col-md-6 col-sm-6">
-            <h3><%= t".contact" %>: </h3><h4 class="title"><%= t".phone" %></h4>
-            <div class="row wow">
-              <div class="col-md-6 col-sm-6"><%= link_to t("layouts.header.rights"), static_pages_rights_path(locale: I18n.locale) %></div>
-              <div class="col-md-6 col-sm-6"><%= link_to t("layouts.header.article"), articles_path(locale: I18n.locale) %></div>
-            </div>
-            <div class="row wow">
-              <div class="col-md-6 col-sm-6"><%= link_to t(".help"), static_pages_fee_path(locale: I18n.locale) %></div>
-              <div class="col-md-6 col-sm-6"><%= link_to t(".about_us"), static_pages_about_path(locale: I18n.locale) %></div>
-            </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-sm-12">
+            <h3><%= t".contact" %></h3>
+            <p>Hà Nội: Tầng 5, Tòa nhà Bigwin, 53 Yên Lãng, Quận Đống Đa, Hà Nội</p>
+            <p>HCM: Tầng 10, Tòa nhà Bảo Việt Số 233 Đồng Khởi, Phường Bến Nghé, Quận 1, TP HCM</p>
+            <p>CN các tỉnh: Hải Phòng, Bình Dương, Đà Nẵng…</p>
+            <p>Hotline: 0966.795.333 – 0983.918.966</p>
+            <p>Tel: 02466.554.333, Email: hotro@ibaoviet.vn</p>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <h3><%= t".new_post" %> </h3>
+            <p><%= link_to t("layouts.header.rights"), static_pages_rights_path(locale: I18n.locale) %></p>
+            <p><%= link_to t("layouts.header.article"), articles_path(locale: I18n.locale) %></p>
+            <p><%= link_to t(".help"), static_pages_fee_path(locale: I18n.locale) %></p>
+            <p><%= link_to t(".about_us"), static_pages_about_path(locale: I18n.locale) %></p>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <h3><%= t".information" %> </h3>
+            <p><%= link_to t("layouts.header.rights"), static_pages_rights_path(locale: I18n.locale) %></p>
+            <p><%= link_to t("layouts.header.article"), articles_path(locale: I18n.locale) %></p>
+            <p><%= link_to t(".help"), static_pages_fee_path(locale: I18n.locale) %></p>
+            <p><%= link_to t(".about_us"), static_pages_about_path(locale: I18n.locale) %></p>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <h3><%= t".service" %> </h3>
+            <p><%= link_to t("layouts.header.rights"), static_pages_rights_path(locale: I18n.locale) %></p>
+            <p><%= link_to t("layouts.header.article"), articles_path(locale: I18n.locale) %></p>
+            <p><%= link_to t(".help"), static_pages_fee_path(locale: I18n.locale) %></p>
+            <p><%= link_to t(".about_us"), static_pages_about_path(locale: I18n.locale) %></p>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <h3><%= t".language" %> </h3>
+            <p><%= link_to t(".vietnam"), locale:"vi" %></p>
+            <p><%= link_to t(".english"), locale:"en" %></p>
           </div>
         </div> <!-- end row -->
       </div> <!-- end container -->
@@ -27,14 +60,6 @@
         <div class="row">
           <div class="col-md-6">
             <p>Copyright © 2018. Designed by <a href="#">D&H</a>. All rights reseved</p>
-          </div>
-          <div class="col-md-6">
-            <ul class="social-icon">
-              <li><a href="#" class="linkedin"></a></li>
-              <li><a href="#" class="google-plus"></a></li>
-              <li><a href="#" class="twitter"></a></li>
-              <li><a href="#" class="facebook"></a></li>
-            </ul>
           </div>
         </div>
       </div>
