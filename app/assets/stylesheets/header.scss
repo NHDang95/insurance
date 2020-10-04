@@ -1,6 +1,6 @@
 .navbar-default {
   border-color: transparent;
-  background-color: #fff;
+  background-color: #fff !important;
 
   .navbar-header {
     height: 100px;
@@ -40,7 +40,7 @@
     }
 
     & > li > a {
-      font-size: 20px;
+      font-size: 17px;
       padding-bottom: 4px;
       font-weight: 700;
       color: #333;
@@ -77,5 +77,11 @@
   &.left,
   &.right {
     background-image: unset;
+  }
+}
+
+#loginModal {
+  .checkbox input[type="checkbox"] {
+    margin-left: 0;
   }
 }

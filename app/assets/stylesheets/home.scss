@@ -68,3 +68,25 @@ h1.title-article {
     left: 0;
   }
 }
+
+.hot-products {
+  margin-bottom: 24px;
+
+  .table {
+    p {
+      line-height: 25px;
+      font-size: 18px;
+      padding: 8px;
+      text-align: justify;
+    }
+  }
+
+  .full-text-title {
+    border-radius: 8px;
+    padding: 8px;
+  }
+
+  .btn-primary {
+    float: right;
+  }
+}

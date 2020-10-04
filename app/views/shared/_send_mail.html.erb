@@ -1,40 +1,28 @@
-<div class="modal fade" id="sendmailModal" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header" style="padding:35px 50px;">
-        <button type="button" class="close" data-dismiss="modal">
-        &times;
-        </button>
-        <h4>
-        <span class="fa fa-lock"></span> <%= t "shared.sendmail" %>
-        </h4>
-      </div>
-      <div class="modal-body" style="padding:40px 50px;">
-        <%= form_for(:user, url: sendmail_product_url) do |f| %>
-        <form role="form">
+<div class="send-mail">
+  <div class="container">
+    <h2 class="text-center"><%= t "shared.sendmail" %></h2>
+    <p class="text-center"><%= t "shared.sendmail_notice" %></p>
+    <%= form_for(:user, url: sendmail_product_url) do |f| %>
+    <form role="form">
+      <div class="row">
+        <div class="col-xs-12 col-md-4">
           <div class="form-group">
-            <span class="fa fa-user"></span>
-            <%= f.label :name, t("shared.sign_up.name") %>:<br/><i><%= t"shared.warning" %></i><br/>
-            <%= f.text_field :name, autofocus: true, autocomplete: "name",
+            <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: t("shared.sign_up.name"),
             class: "form-control" %>
           </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
           <div class="form-group">
-            <span class="fa fa-phone"></span>
-            <%= f.label :phone, t("shared.sign_up.phone") %>:<br/><i><%= t"shared.warning" %></i><br/>
-            <%= f.text_field :phone, autocomplete: "phone",
+            <%= f.text_field :phone, autocomplete: "phone",placeholder: t("shared.sign_up.phone"),
             class: "form-control" %>
           </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
           <%= f.submit t("shared.sendmail"),
           class: "btn btn-success btn-block" %>
-        </form>
-        <% end %>
+        </div>
       </div>
-      <div class="modal-footer">
-        <button type="submit" class="btn btn-danger btn-default pull-right"
-        data-dismiss="modal">
-        <span class="fa fa-times"></span><%= t "shared.login.cancel" %>
-        </button>
-      </div>
-    </div>
+    </form>
+    <% end %>
   </div>
 </div>

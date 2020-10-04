@@ -47,27 +47,27 @@
         <li>
           <a href="#"><i class="fa fa-table fa-fw"></i> <%= t ".table" %>
             <span class="fa arrow"></span></a>
-            <ul class="nav nav-second-level">
-              <li>
-                <%= link_to t("shared.users"), admin_users_path(locale: I18n.locale) %>
-              </li>
-              <li>
-                <%= link_to t("shared.articles"), admin_articles_path(locale: I18n.locale) %>
-              </li>
-              <li>
-                <%= link_to t("shared.brands"), admin_brands_path(locale: I18n.locale) %>
-              </li>              
-            </ul>
-          </li>
-          <li>
-            <a href="#"><i class="fa fa-plus-circle fa-fw"></i> <%= t ".addition" %>
-              <span class="fa arrow"></span></a>
-              <ul class="nav nav-second-level">
-                <li><%= link_to t("shared.articles"), new_admin_article_path(locale: I18n.locale) %></li>
-                <li><%= link_to t("shared.types"), new_admin_type_path(locale: I18n.locale) %></li>
-              </ul>
+          <ul class="nav nav-second-level">
+            <li>
+              <%= link_to t("shared.users"), admin_users_path(locale: I18n.locale) %>
+            </li>
+            <li>
+              <%= link_to t("shared.articles"), admin_articles_path(locale: I18n.locale) %>
+            </li>
+            <li>
+              <%= link_to t("shared.brands"), admin_brands_path(locale: I18n.locale) %>
             </li>
           </ul>
-        </div>
-      </div>
-    </nav>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-plus-circle fa-fw"></i> <%= t ".addition" %>
+            <span class="fa arrow"></span></a>
+          <ul class="nav nav-second-level">
+            <li><%= link_to t("shared.articles"), new_admin_article_path(locale: I18n.locale) %></li>
+            <li><%= link_to t("shared.types"), new_admin_type_path(locale: I18n.locale) %></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

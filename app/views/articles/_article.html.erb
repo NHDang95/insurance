@@ -1,27 +1,27 @@
 <div class="clearfix"></div>
 <div class="container_fullwidth">
-	<% @articles.each_slice(3) do |articles| %>
-	<br/>
-	<br/>
-	<div class="row">
-		<% articles.each do |article| %>
-		<div class="col-md-4">
-			<div class="article-item">
-				<%= link_to article_path(article, locale: I18n.locale), class: "panel-title" do %>
-				<h2>
-				<%= article.title %>
-				</h2>
-				<% end %>
-				<div class="summary">
-					<div class="thumbnail-article">
-						<%= image_tag article.image_url(:thumb) if article.image? %>
-					</div>
-					<p class="content"><%= truncate(article.description, length: 330) %></p>
-				</div>
-				<%= link_to t("static_pages.home.more_detail"), article_path(article, locale: I18n.locale), class: "btn btn-primary go-to-detail" %>
-			</div>
-		</div>
-		<% end %>
-	</div>
-	<% end %>
+  <% @articles.each_slice(3) do |articles| %>
+  <br />
+  <br />
+  <div class="row">
+    <% articles.each do |article| %>
+    <div class="col-sm-6 col-xs-12 col-md-4">
+      <div class="article-item">
+        <%= link_to article_path(article, locale: I18n.locale), class: "panel-title" do %>
+        <h2>
+          <%= article.title %>
+        </h2>
+        <% end %>
+        <div class="summary">
+          <div class="thumbnail-article">
+            <%= image_tag article.image_url(:thumb) if article.image? %>
+          </div>
+          <p class="content"><%= truncate(article.description, length: 330) %></p>
+        </div>
+        <%= link_to t("static_pages.home.more_detail"), article_path(article, locale: I18n.locale), class: "btn btn-primary go-to-detail" %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+  <% end %>
 </div>

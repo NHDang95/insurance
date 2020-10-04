@@ -46,9 +46,10 @@ class ProductsController < ApplicationController
 
   def get_product
   	@product = Product.find_by_id(params[:id])
-  	if @product != Product.find_by_id(params[:id])
+    if @product != Product.find_by_id(params[:id])
   		redirect_to root_url
-  	end
+    end
+    redirect_to root_url if @product.nil?
   end
 
   def check_criteria

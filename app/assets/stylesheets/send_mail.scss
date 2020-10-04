@@ -1,0 +1,15 @@
+.send-mail {
+  height: 318px;
+  background: #3678b7;
+  color: #fff;
+
+  form {
+    margin-top: 48px;
+
+    .form-control,
+    .btn-success {
+      height: 42px;
+      font-size: 18px;
+    }
+  }
+}

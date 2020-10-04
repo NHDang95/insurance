@@ -317,6 +317,7 @@ en:
     fee: " Estimated Fee"    
     options: "Advanced Options"
     sendmail: "Request for Advice"
+    sendmail_notice: "Please leave your information below, We will contact you"
     info: "More Info"
     more: "Other Infos"
     home: "Introduction"

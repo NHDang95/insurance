@@ -1,0 +1,45 @@
+.product-page {
+  .nav-tabs > li > a {
+    font-size: 19px;
+    font-weight: bold;
+  }
+
+  .tab-pane {
+    font-size: 18px;
+
+    p {
+      font-size: 18px;
+      line-height: 1.5em;
+    }
+
+    ul {
+      list-style-type: square;
+      list-style-position: inside;
+
+      li {
+        line-height: 27px;
+        text-indent: 52px;
+      }
+    }
+  }
+
+  #Fee {
+    form {
+      text-align: left;
+
+      p {
+        line-height: 1.5em;
+        color: #b9b9b9;
+        font-size: 13px;
+        margin-bottom: 40px;
+      }
+
+      .price {
+        #txt_1 {
+          width: 360px;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}
