@@ -4,6 +4,10 @@ $(function() {
   }, 1000);
 });
 
+$(window).on('load', function() {
+    $(window).scrollTop(0);
+});
+
 //disable usage neu chon group la xe tai or xe bus
 $(document).ready(function() {
   // bind change event handler

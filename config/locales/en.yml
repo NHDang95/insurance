@@ -167,6 +167,7 @@ en:
       address: "55 Giai Phong, Dong Tam, Hai Ba Trung, Ha Noi"
       english: "English"
       home: "Home"
+      admin: "Admin Home"      
       hotline: "Contact at: 098.601.9195"
       login: "Log In"
       logout: "Log Out"
@@ -190,7 +191,8 @@ en:
       infor2: "Main insurances"
       infor3: "Latest articles"
       infor4: "Ways to contact"
-      infor5: "User information"      
+      infor5: "User information"  
+      infor6: "Access web application"                
     footer:
       contact: "Contact"
       information: "Information"

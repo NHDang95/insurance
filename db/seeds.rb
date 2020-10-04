@@ -27,3 +27,12 @@ end
 		description: "Article description" 
 	)
 end
+
+8.times do
+	Option.create(
+		name: "Phụ lục số 08: Bảo hiểm thiệt hại xảy ra ngoài lãnh thổ Việt Nam",
+		created_at: "2020-10-04",
+		updated_at: "2020-10-04",
+		price: "500000"
+	)
+end
