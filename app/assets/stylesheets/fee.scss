@@ -1,0 +1,28 @@
+.fee-page {
+  .fa {
+    color: #3678b7;
+  }
+
+  .content {
+    p {
+      font-size: 16px;
+      line-height: 20px;
+      text-align: justify;
+    }
+
+    .contact {
+      display: flex;
+      justify-content: center;
+      margin: 10px auto;
+      width: 100%;
+
+      h3 {
+        margin: 0;
+      }
+
+      i {
+        padding: 0;
+      }
+    }
+  }
+}
