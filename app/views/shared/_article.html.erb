@@ -1,27 +1,35 @@
-<% @articles.each do |article| %>
-<section>
-  <div class="panel col-sm-4 text-center" style="visibility: visible; background-color: #f0f0f0">
-    <div class="panel-heading" role="tab">
-      <h2 class="panel-title">
-      <span><b><%= truncate(article.title, length: 33) %></b></span>
+<div class="row">
+  <% @articles.each do |article| %>
+  <div class="col-md-4">
+    <div class="article-item">
+      <%= link_to article_path(article, locale: I18n.locale), class: "panel-title" do %>
+      <h2>
+        <%= article.title %>
       </h2>
-    </div>
-    <div class="panel-body">
-      <div style="float: left;">
-        <%= image_tag article.image_url(:thumb) if article.image? %>
-        <h6><i class="fa fa-calendar"> <%= article.created_at.strftime("%d/%m/%Y") %></i></h6>
+      <% end %>
+      <div class="summary">
+        <div class="thumbnail-article">
+          <%= image_tag article.image_url(:thumb) if article.image? %>
+          <img src="https://ibaoviet.vn/wp-content/uploads/2018/04/accident_action.jpg" alt="" />
+          <%
+=begin%>
+          <h6><i class="fa fa-calendar"> <%= article.created_at.strftime("%d/%m/%Y") %></i></h6>
+          <%
+=end%>
+        </div>
+        <p class="content"><%= truncate(article.description, length: 330) %></p>
       </div>
-      <div>
-        <p><%= truncate(article.description, length: 110) %></p>
-      </div>
-      <i style="float: right;"><%= link_to t("static_pages.home.more_detail"), article_path(article, locale: I18n.locale), class: "btn btn-success" %></i>
+      <%= link_to t("static_pages.home.more_detail"), article_path(article, locale: I18n.locale), class: "btn btn-primary go-to-detail" %>
     </div>
-</section>
-<% end %>
-<section style="visibility: visible; background-color: #f0f0f0; float: right;">
+  </div>
+  <% end %>
+</div>
+<section style="visibility: visible; float: right;">
   <div class="row">
     <div class="col-xs-12 text-center">
-      <a><h3 class="text-uppercase"><%= link_to t("shared.all_articles"), articles_path(locale: I18n.locale), class: "btn btn-success" %></h3></a>
+      <a>
+        <h3 class="text-uppercase"><%= link_to t("shared.all_articles"), articles_path(locale: I18n.locale), class: "btn btn-success" %></h3>
+      </a>
     </div>
   </div>
 </section>

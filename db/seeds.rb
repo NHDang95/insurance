@@ -20,8 +20,8 @@ end
 
 10.times do 
 	Article.create(
-		title: "Article title",
-		text: "Article content", 
+		title: "Bảo hiểm tai nạn lao động - Bảo hiểm Bảo Việt",
+		text: "BẢO HIỂM TAI NẠN LAO ĐỘNG - BAOVIET ACCIDENTCARE: Hiện nay theo quy định của nhà nước nhiều lĩnh vực kinh doanh và ngành nghề phải mua bảo hiểm tai nạn lao động như: Công nhân xây dựng, công nhân làm việc trong môi trường có mức độ nguy hiểm cao,....và do nhu cầu cũng như để đảm bảo an toàn và người lao động yên tâm công tác và gắn bó với công ty. Gói bảo hiểm tai nạn lao động của Bảo Hiểm Bảo Việt đáp ứng được các yêu cầu đưa ra. Ưu điểm của gói này là: Mức phí cạnh tranh, mức trách nhiệm cao, thời gian cấp bảo hiểm nhanh chóng và giao tận nơi theo yêu cầu của khách hàng.", 
 		created_at: "2020-09-28", 
 		updated_at: "2020-09-28", 
 		description: "Article description" 
