@@ -1,0 +1,64 @@
+.fee-page {
+  .fa {
+    color: #3678b7;
+  }
+
+  .banner-page {
+    height: 300px;
+    background: #3678b7;
+    color: #fff;
+
+    i.fa {
+      font-size: 14px;
+      color: #fff;
+      padding: 10px 0;
+      width: 40px;
+    }
+
+    hr {
+      width: 50%;
+    }
+
+    h2 {
+      color: #fff;
+    }
+
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+
+  .breadcrumb {
+    background-color: unset;
+    span {
+      color: #fff;
+
+      a {
+        color: #fff;
+      }
+    }
+  }
+
+  .content {
+    p {
+      font-size: 16px;
+      line-height: 20px;
+      text-align: justify;
+    }
+
+    .contact {
+      display: flex;
+      justify-content: center;
+      margin: 10px auto;
+      width: 100%;
+
+      h3 {
+        margin: 0;
+      }
+
+      i {
+        padding: 0;
+      }
+    }
+  }
+}
