@@ -724,6 +724,7 @@ button:hover {
   float: left;
   width: 100%;
   background: none;
+  height: 500px;
 }
 
 /*```````````` header section close ```````````````````*/
