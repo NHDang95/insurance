@@ -186,6 +186,11 @@ en:
       fee_type: "Admission Fee"
       description1: "D&H HEALTH CARE: In our lives, Health is the most valuable asset of people, health always plays an important role, which is indispensable to contribute to the foundation of happiness. for every individual, every family and society. Therefore, the care and protection of health is an essential need and requirement that the community as well as each individual care about."
       description2: "AUTOMOBILE INSURANCE: Compulsory automobile insurance is insurance for car owners in accordance with the law. This insurance is effective for 3rd party insurance when an accident occurs. That is, if the owner of a car causes an accident for another person, the insurance company will be responsible for compensating those who got it."
+      infor1: "Main website"
+      infor2: "Main insurances"
+      infor3: "Latest articles"
+      infor4: "Ways to contact"
+      infor5: "User information"      
     footer:
       contact: "Contact"
       information: "Information"

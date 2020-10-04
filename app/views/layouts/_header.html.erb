@@ -16,11 +16,11 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li><%= link_to t(".home"), root_path %><span class="information">Các gói bảo hiểm</span></li>
+            <li><%= link_to t(".home"), root_path %><span class="information"><%= t".infor1" %></span></li>
             <% @all_categories.each do |category| %>
             <% if category.descendants.present? %>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= t("#{category.name}") %> <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= t("#{category.name}") %> <span class="caret"></span></a><span class="information"><%= t".infor2" %></span>
               <div class="dropdown-menu">
                 <div class="row">
                   <div class="col-md-6 col-sm-6">
@@ -39,11 +39,11 @@
             <% end %>
             <li>
               <%= link_to t(".article"), articles_path(locale: I18n.locale) %>
-              <span class="information">Các gói bảo hiểm</span>
+              <span class="information"><%= t".infor3" %></span>
             </li>
             <li>
               <%= link_to t(".contact"), static_pages_about_url(locale: I18n.locale) %>
-              <span class="information">Các gói bảo hiểm</span>
+              <span class="information"><%= t".infor4" %></span>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= t".help" %> <span class="caret"></span></a>
@@ -56,7 +56,7 @@
             <% if user_signed_in? %>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_user.name %> <span class="caret"></span></a>
-              <span class="information">Thông tin người dùng</span>
+              <span class="information"><%= t".infor5" %></span>
               <ul class="dropdown-menu">
                 <% if current_user.admin? %>
                 <li><%= link_to current_user.name, admin_dashboard_path,

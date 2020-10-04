@@ -1,9 +1,10 @@
 <div class="clearfix"></div>
-<div class="container_fullwidth">
-	<div class="container">
-		<div class="hot-products">
+<div class="container_fullwidth fee-page">
+  <%= render "shared/banner_page", title: t("shared.all_articles").upcase, breadscrumb: [{url: "/", title: 'Trang chủ'}, {url: "/bài viết", title: 'Bài viết'}] %>
+  <div class="hot-products">
+    <div class="container">
 			<%= render partial: "article" %>
 		</div>
-		<div><%= will_paginate @articles, :previous_label => t("shared.previous"), :next_label => t('shared.next') %></div>
 	</div>
 </div>
+<div><%= will_paginate @articles, :previous_label => t("shared.previous"), :next_label => t('shared.next') %></div>

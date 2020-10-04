@@ -35,8 +35,7 @@
 <div class="clearfix"></div>
 <div class="container">
   <div class="hot-products">
-    <%
-=begin%>
+    <h1 class="title-article"><%= t "layouts.header.categories" %></h1>
     <section>
       <div class="row">
         <div class="jumbotron full-text-title" style="background-color: #f0f0f0;">
@@ -55,7 +54,7 @@
                 </div>
               </div>
               <div>
-                <div style="float: right;"><%= link_to t("shared.info"), product, class: "btn btn-success" %></div>
+                <div style="float: right;"><%= link_to t("shared.info"), product, class: "btn btn-primary go-to-detail" %></div>
               </div>
             </div>
             <% end %>
@@ -63,8 +62,6 @@
         </div>
       </div>
     </section>
-    <%
-=end%>
     <h1 class="title-article"><%= t "layouts.header.articles" %></h1>
     <%= render partial: "shared/article"%>
   </div> <!-- end hot-product -->
