@@ -22,13 +22,13 @@
         <i class="fa fa-gear fa-fw"></i> <%= t ".settings" %> <b class="caret"></b>
       </a>
       <ul class="dropdown-menu dropdown-user">
-        <li><%= link_to edit_user_registration_path do %>
+        <li><%= link_to edit_user_registration_path(locale: I18n.locale) do %>
           <i class="fa fa-user fa-fw"></i>
           <%= t ".user_profile" %>
           <% end %>
         </li>
         <li class="divider"></li>
-        <li><%= link_to destroy_user_session_path, method: :delete do %>
+        <li><%= link_to destroy_user_session_path(locale: I18n.locale), method: :delete do %>
           <i class="fa fa-sign-out fa-fw"></i>
           <%= t "layouts.header.logout" %>
           <% end %>
@@ -39,7 +39,7 @@
   <div class="navbar-default sidebar" role="navigation">
     <div class="sidebar-nav navbar-collapse">
       <ul class="nav" id="side-menu">
-        <li><%= link_to admin_dashboard_path do %>
+        <li><%= link_to admin_dashboard_path(locale: I18n.locale) do %>
           <i class="active fa fa-dashboard fa-fw"></i>
           <%= t ".dashboard" %>
           <% end %>
@@ -49,13 +49,13 @@
             <span class="fa arrow"></span></a>
             <ul class="nav nav-second-level">
               <li>
-                <%= link_to t("shared.users"), admin_users_path %>
+                <%= link_to t("shared.users"), admin_users_path(locale: I18n.locale) %>
               </li>
               <li>
-                <%= link_to t("shared.articles"), admin_articles_path %>
+                <%= link_to t("shared.articles"), admin_articles_path(locale: I18n.locale) %>
               </li>
               <li>
-                <%= link_to t("shared.brands"), admin_brands_path %>
+                <%= link_to t("shared.brands"), admin_brands_path(locale: I18n.locale) %>
               </li>              
             </ul>
           </li>
@@ -63,7 +63,8 @@
             <a href="#"><i class="fa fa-plus-circle fa-fw"></i> <%= t ".addition" %>
               <span class="fa arrow"></span></a>
               <ul class="nav nav-second-level">
-                <li><%= link_to t("shared.articles"), new_admin_article_path %></li>
+                <li><%= link_to t("shared.articles"), new_admin_article_path(locale: I18n.locale) %></li>
+                <li><%= link_to t("shared.types"), new_admin_type_path(locale: I18n.locale) %></li>
               </ul>
             </li>
           </ul>

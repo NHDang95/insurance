@@ -83,6 +83,12 @@ vi:
       new:
         new_type: "Tạo mới Loại xe"
         name: "Tên loại xe"        
+      edit: 
+        edit_type: "Chỉnh sửa Loại xe"
+        name: "Tên loại xe" 
+        group: "Nhóm xe"
+        brand: "Hãng xe"     
+        delete: "Xóa"        
     articles:
       index: 
         article_list: "Danh sách bài viết"      
@@ -302,7 +308,7 @@ vi:
     modelyear: "Đời xe"
     input: "Nhập giá trị xe"
     descript: "Kiểm tra Phí Bảo hiểm dựa theo các tiêu chí dưới đây:"      
-    price: "Giá sản phẩm"      
+    price: "Giá thực tế"      
     fee: "Phí bảo hiểm dự tính"
     options: "Thêm điều khoản"
     sendmail: "Đăng ký nhận Tư vấn"

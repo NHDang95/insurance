@@ -121,12 +121,54 @@
 					</div>
 					<% end %>
 				</div>
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="font-size: 150%">
-					<%= f.label :fee, t("shared.fee") %>:
-					<%= number_to_currency(@product.fee, unit: "VNĐ", format: "%n %u", delimiter: ".", locale: :en, precision: 0) %>
-				</div>
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><%= f.submit t("shared.check"), class: "btn btn-success", data: { confirm: "#{t("devise.registrations.edit.are_you_sure")}"} %></div>
-				<% end %>
+				<!-- modal hien thi cac option va ket qua tra phi -->
+				<% if session[:product].present? %>				
+				<div class="modal fade" id="checkModal" role="dialog">
+				  <div class="modal-dialog">
+				    <div class="modal-content">
+				      <div class="modal-header" style="padding:35px 50px;">
+				        <button type="button" class="close" data-dismiss="modal">
+				        &times;
+				        </button>
+				        <h4>
+				        <span class="fa fa-lock"></span><b><%= t "shared.check" %></b>
+				        </h4>
+				      </div>
+				      <div class="modal-body" style="padding:40px 50px;">
+				        <ul class="list-group list-group-flush">
+				          	<li class="list-group-item">
+				          		<%= f.label :group_id, t("shared.groupy") %>:
+				        		<i style="font-size: 150%"><%= session[:product][0]%></i>
+				        	</li>
+				          	<li class="list-group-item">
+								<%= f.label :modelyear_id, t("shared.modelyear") %>:				          		
+				        		<i style="font-size: 150%"><%= session[:product][1]%></i>
+				        	</li>
+				          	<li class="list-group-item">
+								<%= f.label :usage_id, t("shared.usage") %>:				          		
+				        		<i style="font-size: 150%"><%= session[:product][2]%></i>
+				        	</li>
+				          	<li class="list-group-item">
+								<%= f.label :price, t("shared.price") %>:				          		
+				        		<i style="font-size: 150%"><%= number_to_currency(session[:product][5], unit: "VNĐ", format: "%n %u", delimiter: ".", locale: :en, precision: 0) %></i>
+				        	</li>
+				          	<li class="list-group-item list-group-item-success">
+								<i style="font-size: 150%"><%= f.label :fee, t("shared.fee") %>:</i>
+								<i style="font-size: 200%"><b><%= number_to_currency(@product.fee, unit: "VNĐ", format: "%n %u", delimiter: ".", locale: :en, precision: 0) %></b></i>
+				          	</li>
+				        </ul>
+				      </div>
+				      <div class="modal-footer">
+				        <button type="submit" class="btn btn-danger pull-right" data-dismiss="modal">
+				          <span class="fa fa-times"></span> <%= t "shared.login.cancel" %>
+				        </button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+				<% end %> <!-- end modal check -->
+				<% end %> <!-- end form_for -->
 				<div class="clearfix"></div>					
 				<i><button class="btn btn-danger" onclick="clearer()"><%= t"shared.clear" %></button></i>				
 				<% end %>
@@ -223,4 +265,10 @@ function clearer(){
 	sessionStorage.clear();
 	localStorage.clear();
 }
+
+$(document).ready(function() {
+    if (window.location.href.indexOf("&commit=Tra") != -1 || window.location.href.indexOf("&commit=Insurance") != -1){
+    	$('#checkModal').modal('show');
+    }
+});
 </script>
