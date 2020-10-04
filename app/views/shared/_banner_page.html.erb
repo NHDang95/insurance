@@ -1,0 +1,19 @@
+<div class="banner-page">
+  <div class="container">
+    <h2 class="text-center"><b><%= title %></b></h2>
+    <hr />
+    <p class="desc-title"></p>
+    <div class="breadcrumb" typeof="BreadcrumbList" vocab="http://schema.org/">
+      <!-- Breadcrumb NavXT 6.4.0 -->
+      <span property="itemListElement" typeof="ListItem">
+        <% breadscrumb.each_with_index do |item, index| %>
+        <a property="item" typeof="WebPage" title="Trang chủ" href="<%= item[:url] %>" class="home" itemprop="item" data-wpel-link="internal">
+          <span property="name"><%= item[:title] %></span>
+        </a>
+        <% if index != breadscrumb.length - 1 %>
+        <i class="fa fa-angle-double-right"></i>
+        <% end %>
+        <% end %>
+    </div>
+  </div>
+</div>

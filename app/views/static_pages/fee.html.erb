@@ -1,20 +1,6 @@
 <div class="clearfix"></div>
 <div class="container_fullwidth fee-page">
-  <div class="banner-page">
-    <div class="container">
-      <h2 class="text-center"><b><%= t(".fee_title").upcase %></b></h2>
-      <hr />
-      <p class="desc-title"></p>
-      <div class="breadcrumb" typeof="BreadcrumbList" vocab="http://schema.org/">
-        <!-- Breadcrumb NavXT 6.4.0 -->
-        <span property="itemListElement" typeof="ListItem">
-          <a property="item" typeof="WebPage" title="Trang chủ" href="/" class="home" itemprop="item" data-wpel-link="internal"><span property="name">Trang chủ</span></a>
-          <meta property="position" content="1"></span> <i class="fa fa-angle-double-right"></i> <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to the Hỗ trợ category archives." href="/ho-tro/" class="taxonomy category" itemprop="item" data-wpel-link="internal"><span property="name">Hỗ trợ</span></a>
-          <meta property="position" content="2"></span> <i class="fa fa-angle-double-right"></i> <span property="itemListElement" typeof="ListItem"><span property="name" itemprop="item"><%= t(".fee_title") =%></span>
-          <meta property="position" content="3"></span>
-      </div>
-    </div>
-  </div>
+  <%= render "shared/banner_page", title: t(".fee_title").upcase, breadscrumb: [{url: "/", title: 'Trang chủ'}, {url: "/ho-tro", title: 'Hỗ Trợ'}, {url: '#', title: t(".fee_title")}] %>
   <div class="hot-products">
     <div class="container">
       <div class="row">

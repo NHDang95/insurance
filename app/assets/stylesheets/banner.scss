@@ -1,0 +1,34 @@
+.banner-page {
+  height: 300px;
+  background: #3678b7;
+  color: #fff;
+
+  i.fa {
+    font-size: 14px;
+    color: #fff;
+    padding: 10px 0;
+    width: 40px;
+  }
+
+  hr {
+    width: 50%;
+  }
+
+  h2 {
+    color: #fff;
+  }
+
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  .breadcrumb {
+    background-color: unset;
+    span {
+      color: #fff;
+
+      a {
+        color: #fff;
+      }
+    }
+  }
+}
