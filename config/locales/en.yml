@@ -97,9 +97,13 @@ en:
         info: "Info"        
       new:
         new_article: "Create an Article"    
-        title: "Title......"
-        text: "Content......"
-        description: "Description......"
+        atitle: "Title"
+        atext: "Content"
+        adescription: "Description"
+        aimage: "Image"
+        title: "Title......."
+        text: "Content......."
+        description: "Description......"        
       show:
         article: "Article Details"
       edit:

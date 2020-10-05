@@ -169,7 +169,7 @@
         <div class="row">
           <div class="col-xs-12 col-md-6">
             <button class="btn btn-default" onclick="toggleOptions(event)"><%= t("shared.options") %></button>
-            <div id="choices" style="display: none">
+            <div id="choices" style="display: none"><!-- hien thi cac option -->
               <% @options.each do |option| %>
               <div class="col-xs-4 col-md-4">
                 <ul class="list-group list-group-flush">
@@ -192,7 +192,7 @@
             <button class="btn btn-danger" onclick="clearer()"><%= t"shared.clear" %></button>
           </div>
         </div>
-        <!-- modal hien thi cac option va ket qua tra phi -->
+        <!-- modal hien thi ket qua tra phi -->
         <% if session[:product].present? %>
         <div class="modal fade" id="checkModal" role="dialog">
           <div class="modal-dialog">
@@ -238,7 +238,7 @@
           </div>
         </div>
         <% end %>
-        <!-- end modal check -->
+        <!-- end modal check(ket qua tra phi) -->
         <% end %>
         <!-- end form_for -->
         <div class="clearfix"></div>
@@ -265,12 +265,12 @@
   function clearer() {
     sessionStorage.clear();
     localStorage.clear();
-  }
+  }//xoa lua chon
 
   $(document).ready(function() {
     if (window.location.href.indexOf("&commit=Tra") != -1 || window.location.href.indexOf("&commit=Insurance") != -1) {
       $('#Fee-tab').tab('show');
       $('#checkModal').modal('show');
     }
-  });
+  });//chuyen ve tab tra phi va hien thi hop thoai ket qua tinh phi 
 </script>

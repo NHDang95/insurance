@@ -97,9 +97,13 @@ vi:
         info: "Xem"        
       new:
         new_article: "Tạo mới một bài viết" 
+        atitle: "Tiêu đề"
+        atext: "Nội dung"        
+        adescription: "Mô tả"      
+        aimage: "Ảnh"          
         title: "Tiêu đề......"
         text: "Nội dung......"        
-        description: "Mô tả......"        
+        description: "Mô tả......"                
       show:
         article: "Nội dung bài viết"       
       edit:
