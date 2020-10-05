@@ -223,16 +223,18 @@
                     <%= f.label :price, t("shared.price") %>:
                     <%= number_to_currency(session[:product][5], unit: "VNĐ", format: "%n %u", delimiter: ".", locale: :en, precision: 0) %>
                   </li>
+                  <% if params[:option_ids].present? %>
                   <li class="list-group-item">
                     <ul class="list-group">
                       <%= f.label :option, t("shared.options") %>:
                       <% params[:option_ids].each do |a| %>
                         <% if params[:option_ids].include?(a) %>
-                          <li style="text-align: center;"><%= t("shared.option.opt#{Option.find_by_id(a).id}")[0...13] if params[:option_ids].present? %></li>
+                          <li style="text-align: center;"><%= t("shared.option.opt#{Option.find_by_id(a).id}")[0...13] %></li>
                         <% end %>
                       <% end %>                    
                     </ul>              
                   </li>
+                  <% end %>
                   <li class="list-group-item list-group-item-success">
                     <%= f.label :fee, t("shared.fee") %>:
                     <i style="font-size: 120%"><b><%= number_to_currency(@product.fee, unit: "VNĐ", format: "%n %u", delimiter: ".", locale: :en, precision: 0) %></b></i>
