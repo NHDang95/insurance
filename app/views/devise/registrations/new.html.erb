@@ -1,6 +1,6 @@
 <div class="clearfix"></div>
 <div class="container_fullwidth sign-up-page">
-  <%= render "shared/banner_page", title: 'Sign Up', breadscrumb: [{url: "/", title: 'Đăng ký'}, {url: "/users/sign_up", title: 'Đăng ký'}] %>
+  <%= render "shared/banner_page", title: 'Sign Up', breadscrumb: [{url: "/", title: 'Trang chủ'}, {url: "/users/sign_up", title: 'Đăng ký'}] %>
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-xs-12 col-md-offset-3">
@@ -10,7 +10,7 @@
             <%= render "devise/shared/error_messages", resource: resource %>
             <br />
             <div class="field text-left">
-              <%= f.label :email %><br />
+              <%= f.label :email %>:<br />
               <%= f.email_field :email, autofocus: true, autocomplete: "email",
                       class: "form-control"%>
             </div>
@@ -28,15 +28,15 @@
             </div>
             <br />
             <div class="field text-left">
-              <%= f.label :password %>
+              <%= f.label :password %>:
               <% if @minimum_password_length %>
-              <em>(<%= @minimum_password_length %> characters minimum)</em>
+              <em>(<%= @minimum_password_length %> <%= t"devise.registrations.characters_minimum" %>)</em>
               <% end %><br />
               <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
             </div>
             <br />
             <div class="field text-left">
-              <%= f.label :password_confirmation %><br />
+              <%= f.label :password_confirmation %>:<br />
               <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
             </div>
             <br />

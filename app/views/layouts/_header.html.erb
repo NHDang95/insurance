@@ -67,11 +67,14 @@
             </li>
             <% else %>
             <li>
-              <%= link_to t(".login"), "#",
-                      data: {toggle: "modal", target: "#loginModal"},
-                      class: "login" %>
+              <%= link_to t(".login"), "#", data: {toggle: "modal", target: "#loginModal"}, class: "login" %>
               <%= render "shared/login" %>
-              <span class="information"><%= t".infor6" %></span>
+              <span class="information"><%= t".infor6" %></span>                            
+            </li>
+            <li>
+              <%= link_to t(".signup"), "#", data: {toggle: "modal", target: "#signupModal"}, class: "signup" %>
+              <%= render "shared/sign_up" %>
+              <span class="information"><%= t".infor7" %></span>                            
             </li>
             <% end %>
           </ul>

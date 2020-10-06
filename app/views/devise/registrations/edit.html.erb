@@ -1,7 +1,6 @@
 <div class="clearfix"></div>
 <div class="container_fullwidth">
-  <%= render "shared/banner_page", title: 'Edit User', breadscrumb: [{url: "/", title: 'Edit User'}, {url: "/users/sign_up", title: 'Edit User'}] %>
-
+  <%= render "shared/banner_page", title: 'Chỉnh sửa thông tin Thành Viên', breadscrumb: [{url: "/", title: 'Trang chủ'}, {url: "/users/edit", title: 'Thông tin Thành Viên'}] %>
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-xs-12 col-md-offset-3">
@@ -20,30 +19,27 @@
             <% end %>
             <br />
             <div class="field text-left">
-              <%= f.label :name %><br />
+              <%= f.label :name %>:<br />
               <%= f.text_field :name, autocomplete: "name", class: "form-control" %>
             </div>
             <br />
             <div class="field text-left">
-              <%= f.label :phone %><br />
+              <%= f.label :phone %>:<br />
               <%= f.telephone_field :phone, class: "form-control" %>
             </div>
             <br />
             <div class="field text-left">
-              <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+              <%= f.label :password %>: <i>(<%= t".leave_blank_if_you_dont_want_to_change_it" %>)</i><br />
               <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
-              <% if @minimum_password_length %>
-              <em><%= @minimum_password_length %> characters minimum</em>
-              <% end %>
             </div>
             <br />
             <div class="field text-left">
-              <%= f.label :password_confirmation %><br />
+              <%= f.label :password_confirmation %>:<br />
               <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
             </div>
             <br />
             <div class="field text-left">
-              <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+              <%= f.label :current_password %><i>(<%= t".only_required_if_you_want_to_change_password" %>)</i><br />
               <%= f.password_field :current_password, autocomplete: "current-password", class: "form-control" %>
             </div>
             <br />
@@ -52,8 +48,8 @@
             </div>
             <% end %>
             <br />
-            <h3>Cancel my account</h3>
-            <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-danger" %></p>
+            <h3><%= t".cancel_my_account" %></h3>
+            <p><%= t".unhappy" %> <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-danger" %></p>
           </div>
         </div>
       </div>
