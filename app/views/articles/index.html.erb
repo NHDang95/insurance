@@ -1,6 +1,6 @@
 <div class="clearfix"></div>
 <div class="container_fullwidth fee-page">
-  <%= render "shared/banner_page", title: t("shared.all_articles").upcase, breadscrumb: [{url: "/", title: 'Trang chủ'}, {url: "/bài viết", title: 'Bài viết'}] %>
+  <%= render "shared/banner_page", title: t("shared.all_articles").upcase, breadscrumb: [{url: "/", title: 'Trang chủ'}, {url: "/#{I18n.locale}/articles", title: 'Bài viết'}] %>
   <div class="hot-products">
     <div class="container">
 			<%= render partial: "article" %>

@@ -7,19 +7,29 @@
 		</div>
 		<%= form_for [:admin, @article], :html => {:multipart => true} do |f| %>
 		<%= render 'shared/error_messages',object: f.object %>
-		<div class="field text-center">
-			<%= f.text_area :title, placeholder: t(".title") %>
+		<div class="field">
+			<%= f.label :title, t(".atitle") %>:
+			<div>
+				<%= f.text_area :title, placeholder: t(".title") %>
+			</div>
 		</div>
 		<div class="field">
+			<%= f.label :title, t(".atext") %>:
 			<%= f.text_area :text, placeholder: t(".text"), class: "tinymce" %>
 			<%= tinymce %>
 		</div>
 		<div class="field">
-			<%= f.text_area :description, placeholder: t(".description") %>
+			<%= f.label :title, t(".adescription") %>:
+			<div>		
+				<%= f.text_area :description, placeholder: t(".description") %>
+			</div>
 		</div>
-		<%= f.file_field :image %>
-		<%= f.submit t("shared.create"), class: "btn btn-primary" %>
+		<div class="field">
+			<%= f.label :image, t(".aimage") %>:
+			<%= f.file_field :image %>
+		</div>
 		<i style="float: right"><%= link_to t("shared.back"), :back, class: "btn btn-warning" %></i>
+		<%= f.submit t("shared.create"), class: "btn btn-primary pull-right" %>
 		<% end %>
 	</div>
 </div>
