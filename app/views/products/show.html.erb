@@ -4,260 +4,259 @@
   <div class="container" style="margin-top: 24px">
     <ul class="nav nav-tabs" id="myTab">
       <% if @product.id == 5 || @product.id == 4 %>
-      <li class="nav-item active" role="presentation">
-        <a class="nav-link active" id="Home-tab" data-toggle="tab" href="#Home" role="tab" aria-controls="Home" aria-selected="true"><%= t"shared.home" %></a>
-      </li>
-      <li class="nav-item" role="presentation">
-        <a class="nav-link" id="Group-tab" data-toggle="tab" href="#Group" role="tab" aria-controls="Group" aria-selected="false"><%= t"shared.group" if @product.id == 5 %><%= t"shared.benefit" if @product.id == 4 %></a>
-      </li>
-      <li class="nav-item" role="presentation">
-        <a class="nav-link" id="Range-tab" data-toggle="tab" href="#Range" role="tab" aria-controls="Range" aria-selected="false"><%= t"shared.range" if @product.id == 5 %><%= t"shared.goods" if @product.id == 4 %></a>
-      </li>
+	      <li class="nav-item active" role="presentation">
+	        <a class="nav-link active" id="Home-tab" data-toggle="tab" href="#Home" role="tab" aria-controls="Home" aria-selected="true"><%= t"shared.home" %></a>
+	      </li>
+	      <li class="nav-item" role="presentation">
+	        <a class="nav-link" id="Group-tab" data-toggle="tab" href="#Group" role="tab" aria-controls="Group" aria-selected="false"><%= t"shared.group" if @product.id == 5 %><%= t"shared.benefit" if @product.id == 4 %></a>
+	      </li>
+	      <li class="nav-item" role="presentation">
+	        <a class="nav-link" id="Range-tab" data-toggle="tab" href="#Range" role="tab" aria-controls="Range" aria-selected="false"><%= t"shared.range" if @product.id == 5 %><%= t"shared.goods" if @product.id == 4 %></a>
+	      </li>
       <% if !current_user.try(:admin?) && @product.id != 4  %>
-      <li class="nav-item" role="presentation">
-        <a class="nav-link" id="Fee-tab" data-toggle="tab" href="#Fee" role="tab" aria-controls="Fee" aria-selected="false"><%= t"shared.check" %></a>
-      </li>
+	      <li class="nav-item" role="presentation">
+	        <a class="nav-link" id="Fee-tab" data-toggle="tab" href="#Fee" role="tab" aria-controls="Fee" aria-selected="false"><%= t"shared.check" %></a>
+	      </li>
       <% end %>
       <% end %>
     </ul>
     <div class="tab-content" id="myTabContent">
-      <div class="tab-pane fade active in" id="Home" role="tabpanel" aria-labelledby="Home-tab">
-        <% if @product.id == 5 %>
-        <h1><%= t"shared.home" %></h1>
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: justify">
-          <p><%= t"shared.descriptions.descript1" %></p>
-          <p><%= t"shared.descriptions.descript2" %></p>
+	    <div class="tab-pane fade active in" id="Home" role="tabpanel" aria-labelledby="Home-tab">
+	        <% if @product.id == 5 %>
+		        <h1><%= t"shared.home" %></h1>
+		        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: justify">
+		          <p><%= t"shared.descriptions.descript1" %></p>
+		          <p><%= t"shared.descriptions.descript2" %></p>
 
-          <ul>
-            <li><%= t"shared.descriptions.li.li1" %></li>
-            <li><%= t"shared.descriptions.li.li2" %></li>
-            <li><%= t"shared.descriptions.li.li3" %></li>
-            <li><%= t"shared.descriptions.li.li4" %></li>
-          </ul>
+		          <ul>
+		            <li><%= t"shared.descriptions.li.li1" %></li>
+		            <li><%= t"shared.descriptions.li.li2" %></li>
+		            <li><%= t"shared.descriptions.li.li3" %></li>
+		            <li><%= t"shared.descriptions.li.li4" %></li>
+		          </ul>
 
-          <p><%= t"shared.descriptions.descript3" %></p>
-          <p><%= t"shared.descriptions.descript4" %></p>
-          <p><%= t"shared.descriptions.descript5" %></p>
+		          <p><%= t"shared.descriptions.descript3" %></p>
+		          <p><%= t"shared.descriptions.descript4" %></p>
+		          <p><%= t"shared.descriptions.descript5" %></p>
 
-          <ul>
-            <li><%= t"shared.descriptions.li.li5" %></li>
-            <li><%= t"shared.descriptions.li.li6" %></li>
-            <li><%= t"shared.descriptions.li.li7" %></li>
-            <li><%= t"shared.descriptions.li.li8" %></li>
-          </ul>
+		          <ul>
+		            <li><%= t"shared.descriptions.li.li5" %></li>
+		            <li><%= t"shared.descriptions.li.li6" %></li>
+		            <li><%= t"shared.descriptions.li.li7" %></li>
+		            <li><%= t"shared.descriptions.li.li8" %></li>
+		          </ul>
 
-          <p><%= t"shared.descriptions.descript6" %></p>
-          <p><%= t"shared.descriptions.descript7" %></p>
-          <p><%= t"shared.descriptions.descript8" %></p>
+		          <p><%= t"shared.descriptions.descript6" %></p>
+		          <p><%= t"shared.descriptions.descript7" %></p>
+		          <p><%= t"shared.descriptions.descript8" %></p>
 
-          <ul>
-            <li><%= t"shared.descriptions.li.li9" %></li>
-            <li><%= t"shared.descriptions.li.li10" %></li>
-            <li><%= t"shared.descriptions.li.li11" %></li>
-          </ul>
+		          <ul>
+		            <li><%= t"shared.descriptions.li.li9" %></li>
+		            <li><%= t"shared.descriptions.li.li10" %></li>
+		            <li><%= t"shared.descriptions.li.li11" %></li>
+		          </ul>
 
-          <p><%= t"shared.descriptions.descript9" %></p>
-        </div>
-        <% else %>
-        <h1><%= t"shared.home" %></h1>
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: left">
-          <p style="font-size: 120%"><%= t"shared.descriptions.descript12" %></p>
-          <ul><span style="font-size: 150%"><%= t"shared.descriptions.descript13" %></span>
-            <li><%= t"shared.descriptions.li.li17" %></li>
-            <li><%= t"shared.descriptions.li.li18" %></li>
-            <li><%= t"shared.descriptions.li.li19" %></li>
-          </ul>
-          <h4><%= t"shared.descriptions.descript14" %></h4>
-          <h4><b><%= t"shared.descriptions.descript15" %></b></h4>
-          <p><%= t"shared.descriptions.descript16" %></p>
-          <h4><b><%= t"shared.descriptions.descript17" %></b></h4>
-          <p><%= t"shared.descriptions.descript18" %></p>
-          <h4><b><%= t"shared.descriptions.descript19" %></b></h4>
-          <p><%= t"shared.descriptions.descript20" %></p>
-        </div>
-        <% end %>
-      </div>
-      <div class="tab-pane fade" id="Group" role="tabpanel" aria-labelledby="Group-tab">
-        <% if @product.id == 5 %>
-        <h1><%= t"shared.group" %></h1>
-        <%= image_tag "gbh.png" %>
-        <% else %>
-        <h1><%= t"shared.benefit" %></h1>
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: left">
-          <ul><span style="font-size: 150%"><%= t"shared.descriptions.descript21" %></span>
-            <li><%= t"shared.descriptions.li.li20" %></li>
-            <li><%= t"shared.descriptions.li.li21" %></li>
-            <li><%= t"shared.descriptions.li.li22" %></li>
-          </ul>
-          <ul><span style="font-size: 150%"><%= t"shared.descriptions.descript22" %></span>
-            <li><%= t"shared.descriptions.li.li23" %></li>
-            <li><%= t"shared.descriptions.li.li24" %></li>
-          </ul>
-          <%= t"shared.descriptions.descript23" %>
-        </div>
-        <% end %>
-      </div>
-      <div class="tab-pane fade" id="Range" role="tabpanel" aria-labelledby="Range-tab">
-        <% if @product.id == 5 %>
-        <h1><%= t"shared.range" %></h1>
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: left">
-          <ul><span style="font-size: 125%"><%= t"shared.descriptions.descript10" %></span>
-            <li><%= t"shared.descriptions.li.li12" %></li>
-            <li><%= t"shared.descriptions.li.li13" %></li>
-            <li><%= t"shared.descriptions.li.li14" %></li>
-          </ul>
-          <ul><span style="font-size: 125%"><%= t"shared.descriptions.descript11" %></span>
-            <li><%= t"shared.descriptions.li.li15" %></li>
-            <li><%= t"shared.descriptions.li.li16" %></li>
-          </ul>
-        </div>
-        <% else %>
-        <h1><%= t"shared.goods" %></h1>
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: left">
-          <ul><span style="font-size: 150%"><%= t"shared.descriptions.descript24" %></span>
-            <li><%= t"shared.descriptions.li.li25" %></li>
-            <li><%= t"shared.descriptions.li.li26" %></li>
-            <li><%= t"shared.descriptions.li.li27" %></li>
-            <ul><span style="font-size: 150%"><%= t"shared.descriptions.descript25" %></span>
-              <li><%= t"shared.descriptions.li.li28" %></li>
-              <li><%= t"shared.descriptions.li.li29" %></li>
-              <li><%= t"shared.descriptions.li.li30" %></li>
-              <li><%= t"shared.descriptions.li.li31" %></li>
-              <li><%= t"shared.descriptions.li.li32" %></li>
-            </ul>
-          </ul>
-        </div>
-        <% end %>
-      </div>
-      <% if @product.id == 5 %>
-      <div class="tab-pane fade" id="Fee" role="tabpanel" aria-labelledby="Fee-tab">
-        <% if !current_user.try(:admin?) %>
-        <h1><%= t("shared.check") %></h1>
-        <h4><%= t("shared.descript")%></h4>
-        <%= form_for @product, method: :get do |f| %>
-        <div class="row">
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 price">
-            <%= f.label :price, t("shared.price") %>:<br />
-            <%= f.text_field :price, placeholder: t("shared.input"), id: "txt_1", data: {autonumeric: {aSign: 'VNĐ ', mDec: 0}} %>
-            <p />
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12 col-md-6">
-            <%= f.label :group_id, t("shared.groupy") %>:<br />
-            <%= f.collection_select :group_id, Group.order(:id), :id, :name, {:prompt => t("shared.choose")}, {:id=>"group"} %>
-            <p><b><%= t"shared.descriptions.groups" %></b></p>
-          </div>
-          <div class="col-xs-12 col-md-6">
-            <%= f.label :usage_id, t("shared.usage") %>:<br />
-            <%= f.collection_select :usage_id, Usage.order(:id), :id, :name, {:prompt => t("shared.choose")}, {:id=>"usage"} %>
-            <p><b><%= t"shared.descriptions.usage" %></b></p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-6 col-md-6">
-            <%= f.label :modelyear_id, t("shared.modelyear") %>:<br />
-            <%= f.collection_select :modelyear_id, Modelyear.order(:id), :id, :name, {:prompt => t("shared.choose")}, {:id => "modelyear"} %>
-            <p><b><%= t"shared.descriptions.modelyear" %></b></p>
-          </div>
-          <div class="col-xs-12 col-md-6">
-            <%= f.label :type_id, t("shared.types") %>:<br />
-            <%= f.grouped_collection_select :type_id, Brand.order(:name), :types, :name, :group_id, :name, {:prompt => t("shared.choose")}, {:id => "car"} %>
-            <p><b><%= t"shared.descriptions.type" %></b></p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-10 col-md-10">
-            <button class="btn btn-default" onclick="toggleOptions(event)"><%= t("shared.options") %></button>
-            <div id="choices" style="display: none"><!-- hien thi cac option -->
-              <% @options.each do |option| %>
-              <div class="col-xs-4 col-md-6">
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item d-flex justify-content-between align-items-center">
-                    <%= truncate(t("shared.option.opt#{option.id}"), length: 63) %>
-                    (<%= link_to t("shared.info"), "#", data: {toggle: "modal", target: "#optionModal#{option.id}"} %>
-                    <%= render "shared/option#{option.id}" %>)
-                    <span class="badge badge-primary badge-pill" id="options"><%= check_box_tag "option_ids[]", option.id %></span>
-                  </li>
-                </ul>
-              </div>
-              <% end %>
-            </div>
-          </div>
-        </div>
-        <br />
-        <div class="row">
-          <div class="col-xs-4 col-md-2"><%= f.submit t("shared.check"), class: "btn btn-success", data: { confirm: "#{t("devise.registrations.edit.are_you_sure")}"} %></div>
-          <div class="col-xs-4 col-md-2">
-            <button class="btn btn-danger" onclick="clearer()"><%= t"shared.clear" %></button>
-          </div>
-        </div>
-        <!-- modal hien thi ket qua tra phi -->
-        <% if session[:product].present? %>
-        <div class="modal fade" id="checkModal" role="dialog">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header" style="padding:35px 50px;">
-                <button type="button" class="close" data-dismiss="modal">
-                  &times;
-                </button>
-                <h4>
-                  <span class="fa fa-lock"></span><b><%= t "shared.check" %></b>
-                </h4>
-              </div>
-              <div class="modal-body" style="padding:40px 50px;">
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">
-                    <%= f.label :group_id, t("shared.groupy") %>:
-                    <%= session[:product][0]%>
-                  </li>
-                  <li class="list-group-item">
-                    <%= f.label :modelyear_id, t("shared.modelyear") %>:
-                    <%= session[:product][1]%>
-                  </li>
-                  <li class="list-group-item">
-                    <%= f.label :usage_id, t("shared.usage") %>:
-                    <%= session[:product][2]%>
-                  </li>
-                  <li class="list-group-item">
-                    <%= f.label :price, t("shared.price") %>:
-                    <%= number_to_currency(session[:product][5], unit: "VNĐ", format: "%n %u", delimiter: ".", locale: :en, precision: 0) %>
-                  </li>
-                  <% if params[:option_ids].present? %>
-                  <li class="list-group-item">
-                    <ul class="list-group">
-                      <%= f.label :option, t("shared.options") %>:
-                      <% params[:option_ids].each do |a| %>
-                        <% if params[:option_ids].include?(a) %>
-                          <li style="text-align: center;"><%= t("shared.option.opt#{Option.find_by_id(a).id}")[0...13] %></li>
-                        <% end %>
-                      <% end %>                    
-                    </ul>              
-                  </li>
-                  <% end %>
-                  <li class="list-group-item list-group-item-success">
-                    <%= f.label :fee, t("shared.fee") %>:
-                    <i style="font-size: 120%"><b><%= number_to_currency(@product.fee, unit: "VNĐ", format: "%n %u", delimiter: ".", locale: :en, precision: 0) %></b></i>
-                  </li>
-                </ul>
-              </div>
-              <div class="modal-footer">
-                <button type="submit" class="btn btn-danger pull-right" data-dismiss="modal">
-                  <span class="fa fa-times"></span> <%= t "shared.login.cancel" %>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <% end %>
-        <!-- end modal check(ket qua tra phi) -->
-        <% end %>
-        <!-- end form_for -->
-        <div class="clearfix"></div>
-
-        <% end %>
-      </div>
-      <% end %>
+		          <p><%= t"shared.descriptions.descript9" %></p>
+		        </div>
+	        <% else %>
+		        <h1><%= t"shared.home" %></h1>
+		        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: left">
+		          <p style="font-size: 120%"><%= t"shared.descriptions.descript12" %></p>
+		          <ul><span style="font-size: 150%"><%= t"shared.descriptions.descript13" %></span>
+		            <li><%= t"shared.descriptions.li.li17" %></li>
+		            <li><%= t"shared.descriptions.li.li18" %></li>
+		            <li><%= t"shared.descriptions.li.li19" %></li>
+		          </ul>
+		          <h4><%= t"shared.descriptions.descript14" %></h4>
+		          <h4><b><%= t"shared.descriptions.descript15" %></b></h4>
+		          <p><%= t"shared.descriptions.descript16" %></p>
+		          <h4><b><%= t"shared.descriptions.descript17" %></b></h4>
+		          <p><%= t"shared.descriptions.descript18" %></p>
+		          <h4><b><%= t"shared.descriptions.descript19" %></b></h4>
+		          <p><%= t"shared.descriptions.descript20" %></p>
+		        </div>
+	        <% end %>
+	    </div>
+	    <div class="tab-pane fade" id="Group" role="tabpanel" aria-labelledby="Group-tab">
+	        <% if @product.id == 5 %>
+		        <h1><%= t"shared.group" %></h1>
+		        <%= image_tag "gbh.png" %>
+	        <% else %>
+		        <h1><%= t"shared.benefit" %></h1>
+		        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: left">
+		          <ul><span style="font-size: 150%"><%= t"shared.descriptions.descript21" %></span>
+		            <li><%= t"shared.descriptions.li.li20" %></li>
+		            <li><%= t"shared.descriptions.li.li21" %></li>
+		            <li><%= t"shared.descriptions.li.li22" %></li>
+		          </ul>
+		          <ul><span style="font-size: 150%"><%= t"shared.descriptions.descript22" %></span>
+		            <li><%= t"shared.descriptions.li.li23" %></li>
+		            <li><%= t"shared.descriptions.li.li24" %></li>
+		          </ul>
+		          <%= t"shared.descriptions.descript23" %>
+		        </div>
+	        <% end %>
+	    </div>
+	    <div class="tab-pane fade" id="Range" role="tabpanel" aria-labelledby="Range-tab">
+	        <% if @product.id == 5 %>
+		        <h1><%= t"shared.range" %></h1>
+		        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: left">
+		          <ul><span style="font-size: 125%"><%= t"shared.descriptions.descript10" %></span>
+		            <li><%= t"shared.descriptions.li.li12" %></li>
+		            <li><%= t"shared.descriptions.li.li13" %></li>
+		            <li><%= t"shared.descriptions.li.li14" %></li>
+		          </ul>
+		          <ul><span style="font-size: 125%"><%= t"shared.descriptions.descript11" %></span>
+		            <li><%= t"shared.descriptions.li.li15" %></li>
+		            <li><%= t"shared.descriptions.li.li16" %></li>
+		          </ul>
+		        </div>
+	        <% else %>
+		        <h1><%= t"shared.goods" %></h1>
+		        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: left">
+		          <ul><span style="font-size: 150%"><%= t"shared.descriptions.descript24" %></span>
+		            <li><%= t"shared.descriptions.li.li25" %></li>
+		            <li><%= t"shared.descriptions.li.li26" %></li>
+		            <li><%= t"shared.descriptions.li.li27" %></li>
+		            <ul><span style="font-size: 150%"><%= t"shared.descriptions.descript25" %></span>
+		              <li><%= t"shared.descriptions.li.li28" %></li>
+		              <li><%= t"shared.descriptions.li.li29" %></li>
+		              <li><%= t"shared.descriptions.li.li30" %></li>
+		              <li><%= t"shared.descriptions.li.li31" %></li>
+		              <li><%= t"shared.descriptions.li.li32" %></li>
+		            </ul>
+		          </ul>
+		        </div>
+	        <% end %>
+	    </div>
+	    <% if @product.id == 5 %>
+	    <div class="tab-pane fade" id="Fee" role="tabpanel" aria-labelledby="Fee-tab">
+	        <% if !current_user.try(:admin?) %>
+	        <h1><%= t("shared.check") %></h1>
+	        <h4><%= t("shared.descript")%></h4>
+	        <%= form_for @product, method: :get do |f| %>
+	        <div class="row">
+	          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 price">
+	            <%= f.label :price, t("shared.price") %>:<br />
+	            <%= f.text_field :price, placeholder: t("shared.input"), id: "txt_1", data: {autonumeric: {aSign: 'VNĐ ', mDec: 0}} %>
+	            <p />
+	          </div>
+	        </div>
+	        <div class="row">
+	          <div class="col-xs-12 col-md-6">
+	            <%= f.label :group_id, t("shared.groupy") %>:<br />
+	            <%= f.collection_select :group_id, Group.order(:id), :id, :name, {:prompt => t("shared.choose")}, {:id=>"group"} %>
+	            <p><b><%= t"shared.descriptions.groups" %></b></p>
+	          </div>
+	          <div class="col-xs-12 col-md-6">
+	            <%= f.label :usage_id, t("shared.usage") %>:<br />
+	            <%= f.collection_select :usage_id, Usage.order(:id), :id, :name, {:prompt => t("shared.choose")}, {:id=>"usage"} %>
+	            <p><b><%= t"shared.descriptions.usage" %></b></p>
+	          </div>
+	        </div>
+	        <div class="row">
+	          <div class="col-xs-6 col-md-6">
+	            <%= f.label :modelyear_id, t("shared.modelyear") %>:<br />
+	            <%= f.collection_select :modelyear_id, Modelyear.order(:id), :id, :name, {:prompt => t("shared.choose")}, {:id => "modelyear"} %>
+	            <p><b><%= t"shared.descriptions.modelyear" %></b></p>
+	          </div>
+	          <div class="col-xs-12 col-md-6">
+	            <%= f.label :type_id, t("shared.types") %>:<br />
+	            <%= f.grouped_collection_select :type_id, Brand.order(:name), :types, :name, :group_id, :name, {:prompt => t("shared.choose")}, {:id => "car"} %>
+	            <p><b><%= t"shared.descriptions.type" %></b></p>
+	          </div>
+	        </div>
+	        <div class="row">
+	          <div class="col-xs-10 col-md-10">
+	            <button class="btn btn-default" onclick="toggleOptions(event)"><%= t("shared.options") %></button>
+	            <div id="choices" style="display: none"><!-- hien thi cac option -->
+	              <% @options.each do |option| %>
+	              <div class="col-xs-4 col-md-6">
+	                <ul class="list-group list-group-flush">
+	                  <li class="list-group-item d-flex justify-content-between align-items-center">
+	                    <%= truncate(t("shared.option.opt#{option.id}"), length: 63) %>
+	                    (<%= link_to t("shared.info"), "#", data: {toggle: "modal", target: "#optionModal#{option.id}"} %>
+	                    <%= render "shared/option#{option.id}" %>)
+	                    <span class="badge badge-primary badge-pill" id="options"><%= check_box_tag "option_ids[]", option.id %></span>
+	                  </li>
+	                </ul>
+	              </div>
+	              <% end %>
+	            </div>
+	          </div>
+	        </div>
+	        <br />
+	        <div class="row">
+	          <div class="col-xs-4 col-md-2"><%= f.submit t("shared.check"), class: "btn btn-success", data: { confirm: "#{t("devise.registrations.edit.are_you_sure")}"} %></div>
+		      <div class="col-xs col-md-2">
+		          <button class="btn btn-danger" onclick="clearer();return false;"><%= t"shared.clear" %></button>
+		      </div>        	          
+	        </div>
+	        <!-- modal hien thi ket qua tra phi -->
+	        <% if session[:product].present? %>
+	        <div class="modal fade" id="checkModal" role="dialog">
+	          <div class="modal-dialog">
+	            <div class="modal-content">
+	              <div class="modal-header" style="padding:35px 50px;">
+	                <button type="button" class="close" data-dismiss="modal">
+	                  &times;
+	                </button>
+	                <h4>
+	                  <span class="fa fa-lock"></span><b><%= t "shared.check" %></b>
+	                </h4>
+	              </div>
+	              <div class="modal-body" style="padding:40px 50px;">
+	                <ul class="list-group list-group-flush">
+	                  <li class="list-group-item">
+	                    <%= f.label :group_id, t("shared.groupy") %>:
+	                    <%= session[:product][0]%>
+	                  </li>
+	                  <li class="list-group-item">
+	                    <%= f.label :modelyear_id, t("shared.modelyear") %>:
+	                    <%= session[:product][1]%>
+	                  </li>
+	                  <li class="list-group-item">
+	                    <%= f.label :usage_id, t("shared.usage") %>:
+	                    <%= session[:product][2]%>
+	                  </li>
+	                  <li class="list-group-item">
+	                    <%= f.label :price, t("shared.price") %>:
+	                    <%= number_to_currency(session[:product][5], unit: "VNĐ", format: "%n %u", delimiter: ".", locale: :en, precision: 0) %>
+	                  </li>
+	                  <% if params[:option_ids].present? %>
+	                  <li class="list-group-item">
+	                    <ul class="list-group">
+	                      <%= f.label :option, t("shared.options") %>:
+	                      <% params[:option_ids].each do |a| %>
+	                        <% if params[:option_ids].include?(a) %>
+	                          <li style="text-align: center;"><%= t("shared.option.opt#{Option.find_by_id(a).id}")[0...13] %></li>
+	                        <% end %>
+	                      <% end %>                    
+	                    </ul>              
+	                  </li>
+	                  <% end %>
+	                  <li class="list-group-item list-group-item-success">
+	                    <%= f.label :fee, t("shared.fee") %>:
+	                    <i style="font-size: 120%"><b><%= number_to_currency(@product.fee, unit: "VNĐ", format: "%n %u", delimiter: ".", locale: :en, precision: 0) %></b></i>
+	                  </li>
+	                </ul>
+	              </div>
+	              <div class="modal-footer">
+	                <button type="submit" class="btn btn-danger pull-right" data-dismiss="modal">
+	                  <span class="fa fa-times"></span> <%= t "shared.login.cancel" %>
+	                </button>
+	              </div>
+	            </div>
+	          </div>
+	        </div>
+	        <% end %>
+	        <!-- end modal check(ket qua tra phi) -->
+	        <% end %>
+	        <!-- end form_for -->
+        	<div class="clearfix"></div>
+        	<% end %>
+      	</div>
+      	<% end %>
       <div class="clearfix"></div>
     </div>
   </div>
@@ -275,6 +274,10 @@
   }; //hide/unhide hop "Them Dieu Khoan"
 
   function clearer() {
+  	document.getElementById("car").value = "";
+  	document.getElementById("group").value = "";
+  	document.getElementById("modelyear").value = "";
+  	document.getElementById("usage").value = "";  	
     sessionStorage.clear();
     localStorage.clear();
   }//xoa lua chon
