@@ -108,9 +108,9 @@ en:
         article: "Article Details"
       edit:
         edit_article: "Edit Aricle"
-        title: "Title......"
-        text: "Content......"
-        description: "Description......"        
+        title: "Title"
+        text: "Content"
+        description: "Description"
     products:
       index: 
         product_list: "Insurance List"

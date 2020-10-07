@@ -8,15 +8,16 @@
 		<%= form_for [:admin, @brand], :html => {:multipart => true} do |f| %>
 		<%= render 'shared/error_messages',object: f.object %>
 		<div class="row">
-			<div class="col-md-3">
-			</div>
 			<div class="col-md-6">
-				<%= f.text_area :name, placeholder: t(".name") %>
+				<%= f.label :name, t(".name") %>:
+				<div>
+					<%= f.text_area :name, placeholder: t(".name"), class: "form-control" %>
+				</div>
 			</div>
 		</div>
 		<div>
-			<%= f.submit t("shared.edit"), class: "btn btn-success" %>
 			<i style="float: right"><%= link_to t("shared.back"), :back, class: "btn btn-warning" %></i>		
+			<%= f.submit t("shared.edit"), class: "btn btn-success pull-right" %>			
 		</div>
 		<% end %>
 	</div>

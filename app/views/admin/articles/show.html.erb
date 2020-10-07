@@ -15,8 +15,8 @@
 			<%= @article.text.html_safe if !@article.text.nil? %>
 		</div>
 		<div>
-			<%= link_to t("shared.edit"), edit_admin_article_path(@article), class: "btn btn-success" %>
 			<i style="float: right"><%= link_to t("shared.back"), :back, class: "btn btn-warning" %></i>
+			<%= link_to t("shared.edit"), edit_admin_article_path(@article), class: "btn btn-success pull-right" %>			
 		</div>
 	</div>
 </div>

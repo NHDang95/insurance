@@ -8,8 +8,7 @@
 		<%= form_for [:admin, @brand], :html => {:multipart => true} do |f| %>
 		<%= render 'shared/error_messages',object: f.object %>
 		<div class="field">
-			<%= f.text_area :name, placeholder: t(".name"), class: "tinymce" %>
-			<%= tinymce %>
+			<%= f.text_area :name, placeholder: t(".name"), class: "form-control" %>
 		</div>
 		<%= f.submit t("shared.create"), class: "btn btn-primary" %>
 		<i style="float: right"><%= link_to t('shared.back'), :back, class: "btn btn-warning" %></i>
