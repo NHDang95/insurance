@@ -190,7 +190,7 @@ vi:
       help: "Hỗ trợ"
       rights: "Nguyên tắc & Quyền lợi"
       fee_type: "Hình thức đóng phí"   
-      description1: "BẢO HIỂM SỨC KHỎE - HEALTH CARE: Trong cuộc sống chúng ta, Sức khỏe là tài sản quý giá nhất của con người, sức khỏe luôn giữ vai trò quan trọng, là điều không thể thiếu để góp phần tạo nên nền tảng hạnh phúc cho mỗi cá nhân, mỗi gia đình và xã hội. Vì vậy việc chăm sóc, bảo vệ sức khỏe là nhu cầu, đòi hỏi thiết yếu."
+      description1: "BẢO HIỂM SỨC KHỎE - HEALTH CARE: Trong cuộc sống Chúng tôi, Sức khỏe là tài sản quý giá nhất của con người, sức khỏe luôn giữ vai trò quan trọng, là điều không thể thiếu để góp phần tạo nên nền tảng hạnh phúc cho mỗi cá nhân, mỗi gia đình và xã hội. Vì vậy việc chăm sóc, bảo vệ sức khỏe là nhu cầu, đòi hỏi thiết yếu."
       description2: "BẢO HIỂM XE CƠ GIỚI: Bảo hiểm ô tô bắt buộc là loại bảo hiểm dành cho các chủ xe ô tô theo quy định của pháp luật. Bảo hiểm này có tác dụng bảo hiểm cho bên thứ 3 khi xảy ra tai nạn. Tức là nếu người chủ sở hữu xe o tô gây ra tai nạn cho người khác thì công ty bảo hiểm sẽ có trách nhiệm bồi thường cho những người bị tai nạn."
       infor1: "Giao diện chính"
       infor2: "Các sản phẩm bảo hiểm"
@@ -207,7 +207,7 @@ vi:
       new_post: "Bài viết mới"
       info: "Liên lạc"
       phone: "Di động: 098.601.9195"
-      about_us: "Về chúng tôi"
+      about_us: "Về Chúng tôi"
       hiring: "Tuyển dụng"
       help: "Hỗ trợ về phí bảo hiểm"
       products: "Sản phẩm"
@@ -376,16 +376,16 @@ vi:
       service: "Trung tâm dịch vụ khách hàng"
       consult: "Tư vấn khách hàng"      
       caution: "Lưu ý"
-      description1: "Khi đóng phí bảo hiểm cho bất kỳ đại diện nào của H&D Việt Nam, Quý khách vui lòng yêu cầu đại diện của H&D Việt Nam cung cấp Phiếu thu hợp lệ cho khoản phí đã đóng. Trong thời gian 03 ngày làm việc, nếu Quý khách không nhận được tin nhắn/email của H&D xác nhận đã đóng phí, vui lòng liên hệ ngay với chúng tôi."
-      description2: "Để hoàn trả tạm ứng tiền mặt và đóng phí tích lũy, Quý khách vui lòng sử dụng thẻ ATM/ thẻ ghi nợ (Debit Card) để thực hiện giao dịch. Các khoản thanh toán cho mục đích này bằng thẻ tín dụng (Credit Card: Visa, Master, JCB, …) không phù hợp với quy định hiện hành của H&D Việt Nam. Do đó, chúng tôi sẽ thực hiện hoàn trả số tiền đã nhận cho Quý khách sau khi trừ các chi phí ngân hàng phát sinh."
+      description1: "Khi đóng phí bảo hiểm cho bất kỳ đại diện nào của Chúng tôi, Quý khách vui lòng yêu cầu đại diện của Chúng tôi cung cấp Phiếu thu hợp lệ cho khoản phí đã đóng. Trong thời gian 03 ngày làm việc, nếu Quý khách không nhận được tin nhắn/email của Chúng tôi xác nhận đã đóng phí, vui lòng liên hệ ngay với Chúng tôi."
+      description2: "Để hoàn trả tạm ứng tiền mặt và đóng phí tích lũy, Quý khách vui lòng sử dụng thẻ ATM/ thẻ ghi nợ (Debit Card) để thực hiện giao dịch. Các khoản thanh toán cho mục đích này bằng thẻ tín dụng (Credit Card: Visa, Master, JCB, …) không phù hợp với quy định hiện hành của Chúng tôi. Do đó, Chúng tôi sẽ thực hiện hoàn trả số tiền đã nhận cho Quý khách sau khi trừ các chi phí ngân hàng phát sinh."
       description3: "Các điều chỉnh làm thay đổi phí bảo hiểm có thể sẽ dẫn đến việc điều chỉnh hoặc hủy bỏ hóa đơn đã phát hành. Hóa đơn mới được phát hành để thay thế cho hóa đơn đã phát hành (nếu có) sẽ được Công ty thông tin đến Quý khách."
       info: "Liên hệ để biết thêm chi tiết"  
     about:
       info: "Thông tin liên hệ"    
-      description1: "Cuộc sống sẽ tưởng thưởng những ai dám sống hết mình. Hãy vô tư sống trọn hôm nay vì tương lai đã có H&D đảm bảo. Chúng tôi mang đến sản phẩm bảo hiểm đơn giản, dễ hiểu và sự tư vấn tận tình. Với H&D, bạn sẽ có cảm nhận hoàn toàn khác về bảo hiểm nhân thọ.
-      H&D cung cấp sản phẩm bảo hiểm đa dạng từ giáo dục, y tế, tài chính, hưu trí và nhiều lĩnh vực khác. Tất cả nhằm mang đến cho bạn những trải nghiệm tiện lợi và dễ dàng. Các chuyên gia H&D sẽ tư vấn và cùng bạn thiết kế những sản phẩm bảo hiểm phù hợp nhất. Chúng tôi sẽ đi cùng bạn trên hành trình chinh phục mọi hoài bão của mình."
-      description2: "Chúng tôi ở đây, vì bạn Hoạt động tại nhiều quốc gia bao gồm Hồng Kông, Ma Cao, Thái Lan, Indonesia, Philippines, Singapore, Việt Nam, Nhật Bản và Malaysia, Tập đoàn bảo hiểm H&D mang đến một luồng gió mới cho thị trường bảo hiểm và không ngừng mở rộng danh mục sản phẩm và dịch vụ của mình. Với phương châm lấy khách hàng làm trọng tâm, H&D đang từng bước thực hiện sứ mệnh của mình: trở thành công ty bảo hiểm hàng đầu Châu Á Thái Bình Dương và thay đổi hoàn toàn cách khách hàng cảm nhận về bảo hiểm."
-      info1: "Về tập đoàn H&D"
+      description1: "Cuộc sống sẽ tưởng thưởng những ai dám sống hết mình. Hãy vô tư sống trọn hôm nay vì tương lai đã có Chúng tôi đảm bảo. Chúng tôi mang đến sản phẩm bảo hiểm đơn giản, dễ hiểu và sự tư vấn tận tình. Với Chúng tôi, bạn sẽ có cảm nhận hoàn toàn khác về bảo hiểm nhân thọ.
+      Chúng tôi cung cấp sản phẩm bảo hiểm đa dạng từ giáo dục, y tế, tài chính, hưu trí và nhiều lĩnh vực khác. Tất cả nhằm mang đến cho bạn những trải nghiệm tiện lợi và dễ dàng. Các chuyên gia Chúng tôi sẽ tư vấn và cùng bạn thiết kế những sản phẩm bảo hiểm phù hợp nhất. Chúng tôi sẽ đi cùng bạn trên hành trình chinh phục mọi hoài bão của mình."
+      description2: "Chúng tôi ở đây, vì bạn Hoạt động tại nhiều quốc gia bao gồm Hồng Kông, Ma Cao, Thái Lan, Indonesia, Philippines, Singapore, Việt Nam, Nhật Bản và Malaysia, Tập đoàn bảo hiểm Chúng tôi mang đến một luồng gió mới cho thị trường bảo hiểm và không ngừng mở rộng danh mục sản phẩm và dịch vụ của mình. Với phương châm lấy khách hàng làm trọng tâm, Chúng tôi đang từng bước thực hiện sứ mệnh của mình: trở thành công ty bảo hiểm hàng đầu Châu Á Thái Bình Dương và thay đổi hoàn toàn cách khách hàng cảm nhận về bảo hiểm."
+      info1: "Về tập đoàn Chúng tôi"
   errors:
     messages:
       not_saved:

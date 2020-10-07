@@ -152,7 +152,7 @@ en:
         update: "Update"
         updated: "Updated successful"
       user:
-        signed_up: "Welcome to H&D Website"
+        signed_up: "Welcome to Insurance Website"
         updated: "Your User information was updated"
     sessions:
       new:
@@ -376,16 +376,16 @@ en:
       service: "Customer Service"
       consult: "Customer Consultant"
       caution: "Caution"
-      description1: "When paying premiums for any H&D Vietnam representative, please ask a representative of H&D Vietnam to provide a valid Receipt of the paid fee. Within 03 working days, if you do not receive a message / email from H&D confirming payment, please contact us immediately."
-      description2: "For cash advance payment and accrued fee, please use your ATM / Debit Card to make the transaction. Payment for this purpose by credit card (Credit Card: Visa, Master, JCB, ...) is not in accordance with the current regulations of H&D Vietnam. Therefore, we will refund the amount received to you after deducting the bank charges incurred."
+      description1: "When paying premiums for any our representative, please ask a representative of our to provide a valid Receipt of the paid fee. Within 03 working days, if you do not receive a message / email from We confirming payment, please contact us immediately."
+      description2: "For cash advance payment and accrued fee, please use your ATM / Debit Card to make the transaction. Payment for this purpose by credit card (Credit Card: Visa, Master, JCB, ...) is not in accordance with the current regulations of our. Therefore, we will refund the amount received to you after deducting the bank charges incurred."
       description3: "Changes that change the insurance premium may result in an adjustment or cancellation of the issued invoice. Newly issued invoices to replace the issued invoices (if any) will be informed to the Company by the Company."
       info: "Contact Us to Learn More"
     about:
       info: "Contact Details"
-      description1: "Life will reward those who dare to live their best. Live carefree today because the future has H&D guaranteed. We offer simple, easy-to-understand insurance products and dedicated advice. With H&D, you will have a completely different feeling about life insurance.
-       H&D offers a wide range of insurance products from education, health care, finance, retirement and many other fields. All to bring you convenient and easy experience. H&D experts will advise and design with you the most appropriate insurance product. We will accompany you on the journey to conquer all your ambitions."
-      description2: "We are here, because you operate in many countries including Hong Kong, Macao, Thailand, Indonesia, Philippines, Singapore, Vietnam, Japan and Malaysia, H&D Insurance Group brings a breath of fresh air to insurance market and constantly expanding its product and service portfolio. With the motto of customer-centered, H&D is gradually implementing its mission: to become the leading insurance company in Asia Pacific and completely change the way customers feel about insurance."
-      info1: "About H&D"
+      description1: "Life will reward those who dare to live their best. Live carefree today because the future has We guaranteed. We offer simple, easy-to-understand insurance products and dedicated advice. With We, you will have a completely different feeling about life insurance.
+       We offers a wide range of insurance products from education, health care, finance, retirement and many other fields. All to bring you convenient and easy experience. We experts will advise and design with you the most appropriate insurance product. We will accompany you on the journey to conquer all your ambitions."
+      description2: "We are here, because you operate in many countries including Hong Kong, Macao, Thailand, Indonesia, Philippines, Singapore, Vietnam, Japan and Malaysia, We Insurance Group brings a breath of fresh air to insurance market and constantly expanding its product and service portfolio. With the motto of customer-centered, We is gradually implementing its mission: to become the leading insurance company in Asia Pacific and completely change the way customers feel about insurance."
+      info1: "About We"
   errors:
     messages:
       not_saved:
