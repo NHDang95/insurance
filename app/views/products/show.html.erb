@@ -1,6 +1,6 @@
 <div class="clearfix"></div>
 <div class="container_fullwidth product-page">
-  <%= render "shared/banner_page", title: @product.name.upcase, breadscrumb: [{url: "/", title: 'Trang chủ'}, {url: "/#{I18n.locale}/products/#{@product.id}", title: @product.name }] %>
+  <%= render "shared/banner_page", title: t("#{@product.name}").upcase, breadscrumb: [{url: "/", title: "#{t("layouts.header.home")}"}, {url: "/#{I18n.locale}/products/#{@product.id}", title: "#{t("#{@product.name}")}" }] %>
   <div class="container" style="margin-top: 24px">
     <ul class="nav nav-tabs" id="myTab">
       <% if @product.id == 5 || @product.id == 4 %>
