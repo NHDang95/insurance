@@ -25,7 +25,7 @@
               <ul class="dropdown-menu">
                 <% category.children.each do |children| %>
                 <li>
-                  <%= link_to t("#{children.name}"), children %>
+                  <%= link_to t("#{children.name}"), children, data: { turbolinks: 'false'} %>
                 </li>
                 <% end %>
               </ul>

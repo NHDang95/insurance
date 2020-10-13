@@ -361,12 +361,12 @@ en:
     error_messages:
       error: "errors"
       the_form_contains: "The form contains"
-      price: "Price can't be negative or null"
+      price: "Market price can't be lower than 300,000,000 VND"
       criteria: "Please select all criterias"
       send_mail: "There was an error in requesting for advice"
     message:
       you_sure: "Are you sure?"
-      successmail: Request was successfully sent."
+      successmail: Request was successfully sent. Please wait for our Telesale Department to contact you"
   static_pages:
     home:
       more_detail: "More Details"
@@ -399,6 +399,9 @@ en:
           attributes:
             email:
               invalid: "There was an error when signing up"
+            phone:
+              too_short: "Phone number minimum length is 10 characters"
+              too_long: "Phone number maximum length is 11 characters"                                  
             password:
               too_short: "Password is too short (at least %{count} characters)"
             password_confirmation:

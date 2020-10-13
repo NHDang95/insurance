@@ -40,6 +40,10 @@ class ProductsController < ApplicationController
       end
     end
     session[:product] = nil
+    #commit bên TNDS gửi mail 
+    if params[:commit] == "Đăng ký mua TNDS"
+      get_TNDS #lấy params 
+    end
   end
 
   private
@@ -53,7 +57,7 @@ class ProductsController < ApplicationController
   end
 
   def check_criteria
-    if params[:product][:price].to_i <= 0
+    if params[:product][:price].to_i <= 300000000
       flash[:error] = t("shared.error_messages.price")
       redirect_to @product
     elsif params[:product][:group_id].blank?
@@ -149,6 +153,10 @@ class ProductsController < ApplicationController
         @product.fee = params[:product][:price].to_i / 100 * 1.89
       end                     
     end 
+  end
+
+  def get_TNDS
+    #sesion[:tnds] = 
   end
 
   def more_options

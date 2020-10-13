@@ -1,7 +1,7 @@
 $(function() {
   setTimeout(function(){
     $('.alert').slideUp(1000);
-  }, 1000);
+  }, 6000);
 });
 
 //disable usage neu chon group la xe tai or xe bus
@@ -52,5 +52,5 @@ $(document).ready(function(){
        var selected =  $("#modelyear").val();
        sessionStorage.setItem("modelyear", selected);//set lua chon trong session storage
     });    
-    var logoutTimer = setTimeout(function() { sessionStorage.clear(); }, 30000);//xoa session storage sau 30s
+    var logoutTimer = setTimeout(function() { sessionStorage.clear(); }, 120000);//xoa session storage sau 120s
 });

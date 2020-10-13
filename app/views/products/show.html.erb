@@ -13,6 +13,16 @@
 	      <li class="nav-item" role="presentation">
 	        <a class="nav-link" id="Range-tab" data-toggle="tab" href="#Range" role="tab" aria-controls="Range" aria-selected="false"><%= t"shared.range" if @product.id == 5 %><%= t"shared.goods" if @product.id == 4 %></a>
 	      </li>
+	  <% if @product.id != 5 %><!-- Thêm 2 tab TNDS xe máy và xe ô tô bên show products/4 -->
+	  	<!-- Nội dung 2 tab show select năm, giá trị fix và tăng theo số năm -->
+	  	<!-- Commit gửi mail(sendmail trong controller để sẵn) | mở popup sau khi commit nếu được -->
+	      <li class="nav-item" role="presentation">
+	        <a class="nav-link" id="Range-tab" data-toggle="tab" href="#TNDSxemay" role="tab" aria-controls="Range" aria-selected="false">TNDS xe máy</a>
+	      </li>	  
+	      <li class="nav-item" role="presentation">
+	        <a class="nav-link" id="Range-tab" data-toggle="tab" href="#TNDSoto" role="tab" aria-controls="Range" aria-selected="false">TNDS ô tô</a>
+	      </li>	  	      
+	  <% end %> 
       <% if !current_user.try(:admin?) && @product.id != 4  %>
 	      <li class="nav-item" role="presentation">
 	        <a class="nav-link" id="Fee-tab" data-toggle="tab" href="#Fee" role="tab" aria-controls="Fee" aria-selected="false"><%= t"shared.check" %></a>
