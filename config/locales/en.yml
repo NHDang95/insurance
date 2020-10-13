@@ -315,6 +315,8 @@ en:
     create: "Create"
     back: "Back"
     check: "Insurance Fee Checker"
+    tnds_xe_may: "TNDS xe máy"
+    tnds_o_to: "TNDS Ô tô"
     choose: "Please Choose One"
     usage: "Usage"
     groupy: "Car Group"
