@@ -315,6 +315,8 @@ vi:
     create: "Tạo mới"
     back: "Quay lại"  
     check: "Tra Phí Bảo Hiểm"      
+    tnds_xe_may: "TNDS xe máy"     
+    tnds_o_to: "TNDS Ô tô"     
     choose: "Vui lòng chọn một mục"    
     usage: "Mục đích sử dụng"
     groupy: "Nhóm xe"
