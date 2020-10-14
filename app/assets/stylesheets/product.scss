@@ -23,11 +23,30 @@
     }
   }
 
-  #Fee,
+  #Fee {
+    form {
+      text-align: left;
+
+      p {
+        line-height: 1.5em;
+        color: #b9b9b9;
+        font-size: 13px;
+        margin-bottom: 40px;
+      }
+
+      .price {
+        #txt_1 {
+          width: 360px;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+
   #TNDSxemay,
   #TNDSoto {
     form {
-      text-align: left;
+      text-align: center;
 
       p {
         line-height: 1.5em;

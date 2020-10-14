@@ -1,7 +1,7 @@
 $(function() {
   setTimeout(function(){
     $('.alert').slideUp(1000);
-  }, 6000);
+  }, 5000);
 });
 
 //disable usage neu chon group la xe tai or xe bus

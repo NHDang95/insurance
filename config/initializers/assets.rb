@@ -19,6 +19,8 @@ Rails.application.config.assets.precompile += %w( news.png )
 Rails.application.config.assets.precompile += %w( bank.png )
 Rails.application.config.assets.precompile += %w( handshake.png )
 Rails.application.config.assets.precompile += %w( access.png )
+Rails.application.config.assets.precompile += %w( bikeinsu.jpg )
+Rails.application.config.assets.precompile += %w( otoinsu.jpg )
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.

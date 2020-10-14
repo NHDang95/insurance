@@ -16,21 +16,21 @@ class ProductsController < ApplicationController
   end
 
   def sendmail
-    if params[:commit] == "Đăng ký nhận Tư vấn" || params[:commit] == "Request for Advice"
+    if params[:commit] == t("shared.sendmail")
       if !user_signed_in?
         if params[:user][:name].present? && params[:user][:phone].present?
-          SendEmailJob.set(wait: 10.seconds).perform_later(User.find_by(id: 8),
+          SendEmailJob.set(wait: 6.seconds).perform_later(User.find_by(id: 8),
                           params[:user].to_json, session[:product])
           flash[:success] = t("shared.message.successmail")
           redirect_to @product
-        else  
+        else
           flash[:error] = t("shared.error_messages.send_mail")
           redirect_to @product
         end
       elsif user_signed_in? && !current_user.try(:admin?)
         params[:user][:name] = current_user.name
         params[:user][:phone] = current_user.phone
-        SendEmailJob.set(wait: 10.seconds).perform_later(User.find_by(id: 8),
+        SendEmailJob.set(wait: 6.seconds).perform_later(User.find_by(id: 8),
                         params[:user].to_json, session[:product])
         flash[:success] = t("shared.message.successmail")
         redirect_to @product
@@ -38,11 +38,24 @@ class ProductsController < ApplicationController
         flash[:error] = t("shared.error_messages.send_mail")
         redirect_to @product        
       end
-    end
-    session[:product] = nil
-    #commit bên TNDS gửi mail 
-    if params[:commit] == "Đăng ký mua TNDS"
-      get_TNDS #lấy params 
+      session[:product] = nil
+    elsif params[:commit] == t("shared.mailtnds")
+      if !user_signed_in?
+        flash[:error] = t("devise.failure.user.unauthenticated")
+        redirect_to @product
+      elsif user_signed_in? && !current_user.try(:admin?)
+        params[:user][:name] = current_user.name
+        params[:user][:phone] = current_user.phone
+        get_TNDS 
+        SendEmailJob.set(wait: 6.seconds).perform_later(User.find_by(id: 8),
+                        params[:user].to_json, session[:tnds])
+        flash[:success] = t("shared.message.successmail")
+        redirect_to @product              
+      else 
+        flash[:error] = t("shared.error_messages.send_mail")
+        redirect_to @product
+      end
+      session[:tnds] = nil      
     end
   end
 
@@ -156,7 +169,9 @@ class ProductsController < ApplicationController
   end
 
   def get_TNDS
-    #sesion[:tnds] = 
+    if params[:price].present? && params[:num_quantity].present?
+      session[:tnds] = [params[:price], params[:num_quantity]]
+    end
   end
 
   def more_options

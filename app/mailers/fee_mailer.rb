@@ -3,6 +3,6 @@ class FeeMailer < ApplicationMailer
 		@user = user
 		@parameters = parameters
 		@params = params
-		mail to: @user.email, subject: "Request for Insurance Advice"
+		mail to: @user.email, subject: "Advice on Buying Insurance"
 	end
 end
